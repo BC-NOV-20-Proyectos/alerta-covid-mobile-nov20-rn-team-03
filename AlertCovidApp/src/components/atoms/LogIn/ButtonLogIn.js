@@ -1,11 +1,13 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
+import {styles} from '../../../styles/LogIn';
+import {LogInConstants} from '../../../utils/Constants/LogInConstants';
 
 const ButtonLogIn = () => {
   return (
-    <View>
-      <Text></Text>
-    </View>
+    <TouchableOpacity style={styles.ButtonLogIn}>
+      <Text style={styles.TextButton}>{LogInConstants.LogIn}</Text>
+    </TouchableOpacity>
   );
 };
 

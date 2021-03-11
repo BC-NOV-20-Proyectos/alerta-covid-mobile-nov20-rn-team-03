@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import Title from '../atoms/Welcome/Title';
-import Navigation from '../atoms/Welcome/Navigation';
+import Navigation from '../atoms/TapNavigation';
 
 const Welcome = () => {
   return (
