@@ -6,7 +6,7 @@ import Welcome from './screens/WelcomeScreen';
 const index = () => {
   return ( 
     <View>
-      <Welcome></Welcome>
+      <LogIn></LogIn>
     </View>
   );
 };
