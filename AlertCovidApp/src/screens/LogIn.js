@@ -7,7 +7,7 @@ import CreateAccountText from '../components/atoms/LogIn/CreateAccountText';
 import {LogInConstants} from '../utils/Constants/LogInConstants';
 import {styles} from '../styles/LogIn/index'; 
 
-const LogIn = () => {
+const LogIn = ({navigation}) => {
   return (
     <View style={styles.Background}>
       <ImageBackground
@@ -23,7 +23,7 @@ const LogIn = () => {
       <InputLogIn PlaceHolderText={LogInConstants.Email}></InputLogIn>
       <Text style={styles.TextInput}>{LogInConstants.Password}</Text>
       <InputLogIn PlaceHolderText={LogInConstants.Password}></InputLogIn>
-      <ButtonLogIn></ButtonLogIn>
+      <ButtonLogIn navigation={navigation} RouteGo= {LogInConstants.HomeScreen}></ButtonLogIn>
       <CreateAccountText></CreateAccountText>
     </View>
   );
