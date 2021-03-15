@@ -5,4 +5,5 @@ export const LogInConstants = {
   Password : 'Password',
   ForgotPassword : 'Forgot Password?',
   CreateAccount : 'Create Account', 
+  HomeScreen: 'HomeScreen',
 };

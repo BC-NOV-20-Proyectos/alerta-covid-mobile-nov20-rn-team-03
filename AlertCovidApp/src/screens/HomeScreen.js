@@ -1,13 +1,13 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import Home from '../components/molecules/Home'
+
 
 const HomeScreen = () => {
     return (
         <View>
-            <Home></Home>
+           <Text>HOME</Text>
         </View>
     )
 }
 
-export default HomeScreen
+export default HomeScreen;
