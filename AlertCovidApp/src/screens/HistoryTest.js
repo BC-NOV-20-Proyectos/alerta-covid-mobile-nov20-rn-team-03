@@ -31,7 +31,7 @@ const HistoryTest = ({navigation}) => {
        <History />
 
       <View style={styles.ContainerTabMenu}>
-      <TouchableOpacity style={styles.ContainerIcon}>
+      <TouchableOpacity style={styles.ContainerIcon} onPress={()=>navigation.navigate('Profile')} >
         <IconTabMenu
           name="user"
           style={styles.menuIcon}

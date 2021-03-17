@@ -64,7 +64,7 @@ export const styles = StyleSheet.create({
     },
     CreateAccountText: {
         color: colors.gray, 
-        marginTop: 40,
+        marginTop: 10,
     },
     Covid: {
         width: 206,
