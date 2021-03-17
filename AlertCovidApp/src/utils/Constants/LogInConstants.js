@@ -7,4 +7,5 @@ export const LogInConstants = {
   CreateAccount : 'Create Account', 
   HomeScreen: 'HomeScreen',
   Profile: 'Profile',
+  HistoryTest: 'HistoryTest',
 };
