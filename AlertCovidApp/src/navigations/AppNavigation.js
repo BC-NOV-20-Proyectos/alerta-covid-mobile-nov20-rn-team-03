@@ -5,6 +5,7 @@ import LogIn from "../screens/LogIn";
 import HomeScreen from "../screens/HomeScreen";
 import Profile from "../screens/Profile";
 import HistoryTest from "../screens/HistoryTest";
+import HistoryTest2 from "../screens/HistoryTest2";
 const Stack = createStackNavigator();
 
 const AppNavigator = ()=>
@@ -15,6 +16,7 @@ const AppNavigator = ()=>
         <Stack.Screen name="HomeScreen" options={{headerShown: false}} component={HomeScreen}/>                 
         <Stack.Screen name="Profile" options={{headerShown: false}} component={Profile}/>
         <Stack.Screen name="HistoryTest" options={{headerShown: false}} component={HistoryTest}/>
+        <Stack.Screen name="HistoryTest2" options={{headerShown: false}} component={HistoryTest2}/>
       </Stack.Navigator>    
   );
 }

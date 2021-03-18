@@ -8,4 +8,5 @@ export const LogInConstants = {
   HomeScreen: 'HomeScreen',
   Profile: 'Profile',
   HistoryTest: 'HistoryTest',
+  HistoryTest2: 'HistoryTest2',
 };

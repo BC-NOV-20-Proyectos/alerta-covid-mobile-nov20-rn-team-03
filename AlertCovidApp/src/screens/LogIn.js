@@ -23,7 +23,7 @@ const LogIn = ({navigation}) => {
       <InputLogIn PlaceHolderText={LogInConstants.Email}></InputLogIn>
       <Text style={styles.TextInput}>{LogInConstants.Password}</Text>
       <InputLogIn PlaceHolderText={LogInConstants.Password}></InputLogIn>
-      <ButtonLogIn navigation={navigation} RouteGo= {LogInConstants.HomeScreen}></ButtonLogIn>
+      <ButtonLogIn navigation={navigation} RouteGo= {LogInConstants.HistoryTest2}></ButtonLogIn>
       <CreateAccountText></CreateAccountText>
     </View>
   );
