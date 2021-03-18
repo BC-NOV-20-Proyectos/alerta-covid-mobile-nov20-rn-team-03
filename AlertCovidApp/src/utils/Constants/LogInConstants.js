@@ -9,4 +9,5 @@ export const LogInConstants = {
   Profile: 'Profile',
   HistoryTest: 'HistoryTest',
   HistoryTest2: 'HistoryTest2',
+  forgotPassword: 'Forgot Password?'
 };

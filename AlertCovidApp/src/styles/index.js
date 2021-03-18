@@ -9,4 +9,12 @@ export const styles = StyleSheet.create({
         width: windowWidth,
         height: windowHeight,  
     },
+    title:{
+        color: colors.grayFont,
+        fontSize:35,
+        fontWeight: 'bold',
+        paddingVertical:30,
+        paddingLeft: '5%',
+        paddingRight: '10%'
+    },
 });

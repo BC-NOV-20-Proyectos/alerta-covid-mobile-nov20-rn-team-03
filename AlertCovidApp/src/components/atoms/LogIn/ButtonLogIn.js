@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import {styles} from '../../../styles/LogIn';
 import {LogInConstants} from '../../../utils/Constants/LogInConstants';
 

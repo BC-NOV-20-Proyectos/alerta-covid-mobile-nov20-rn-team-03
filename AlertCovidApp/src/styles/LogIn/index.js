@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         width: 150,
         height: 150, 
-        marginTop: 50,
+        marginTop: 30,
     },
     TextTile: {
         fontSize: 36,
@@ -39,18 +39,21 @@ export const styles = StyleSheet.create({
         justifyContent: 'flex-start', 
     }, 
     Input: {
-        width: '90%',
+        width: '100%',
         height: 50,
         borderRadius: 50, 
-        backgroundColor: colors.white
+        backgroundColor: colors.white,
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        alignItems: 'center'
     },
     Icons: {
         width: 32,
         height: 32, 
     },
     ButtonLogIn:{
-        width: '30%',
-        height: 50,
+        width: '38%',
+        height: 45,
         borderRadius: 50, 
         marginTop: 30,
         backgroundColor: colors.white,
@@ -73,4 +76,22 @@ export const styles = StyleSheet.create({
     LogInScreenContainer:{
         width: '90%',
     },
+    containerForm:{
+        width: '100%',
+        height: windowHeight/3.5,
+        justifyContent: 'flex-start',
+        paddingHorizontal: 20
+    },
+    forgotPass:{
+        color: colors.gray,
+        justifyContent:'flex-end',
+        fontSize: 13
+    },
+    input:{
+        width: '50%'
+    },
+    iconLogIn:{
+        width: 32,
+        height: 32, 
+    }
 });
