@@ -1,12 +1,13 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-const Title = () => {
+
+ 
+const MultiSelect = () => {
   return (
-    <View>
-      <Text></Text>
+    <View> 
     </View>
   );
 };
 
-export default Title;
+export default MultiSelect;
