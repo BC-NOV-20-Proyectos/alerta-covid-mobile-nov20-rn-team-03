@@ -6,7 +6,7 @@ const UserDataSrollView = () => {
   return (
     
     <ScrollView style={styles.ContainerDataUser}>
-    <View style={{borderBottomWidth: 1, marginBottom: 8}}>
+    <View style={{borderBottomWidth: 1, marginBottom: 8, marginHorizontal: 10}}>
       <View
         style={{
           display: 'flex',
@@ -25,7 +25,7 @@ const UserDataSrollView = () => {
         <Text style={{color:'#888888'}}>Jorge Ramirez Garcia</Text>
       </View>
     </View>
-    <View style={{borderBottomWidth: 1, marginBottom: 8}}>
+    <View style={{borderBottomWidth: 1, marginBottom: 8, marginHorizontal: 10}}>
       <View
         style={{
           display: 'flex',
@@ -40,7 +40,7 @@ const UserDataSrollView = () => {
         <Text style={{color:'#888888'}}>jorgeramirezgarciaa@gmail.com</Text>
       </View>
     </View>
-    <View style={{borderBottomWidth: 1, marginBottom: 8 }}>
+    <View style={{borderBottomWidth: 1, marginBottom: 8, marginHorizontal:10 }}>
       <View
         style={{
           display: 'flex',

@@ -7,7 +7,7 @@ import IconTabMenu from 'react-native-vector-icons/Feather';
 const HistoryData = () => {
   return (
     <ScrollView style={styles.ContainerDataUser}>
-    <View style={{borderBottomWidth: 1, marginTop:15, marginBottom:10}}>
+    <View style={{borderBottomWidth: 1, marginTop:15, marginBottom:10, marginHorizontal:10}}>
       <View
         style={{
           display: 'flex',
@@ -38,7 +38,7 @@ const HistoryData = () => {
       </View>
     </View>
 
-    <View style={{borderBottomWidth: 1, marginTop:15, marginBottom:10}}>
+    <View style={{borderBottomWidth: 1, marginTop:15, marginBottom:10, marginHorizontal:10 }}>
       <View
         style={{
           display: 'flex',

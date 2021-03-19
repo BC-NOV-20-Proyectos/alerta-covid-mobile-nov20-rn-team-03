@@ -7,9 +7,7 @@ import {
   ImageBackground,
 } from 'react-native';
 import {styles} from '../styles/HistoryTest/index2';
-import Icons from 'react-native-vector-icons/EvilIcons';
-import IconTabMenu from 'react-native-vector-icons/Feather';
-import IconTabMenuHistory from 'react-native-vector-icons/FontAwesome';
+import TapMenu from '../components/molecules/TapMenu'
 import History2 from '../components/atoms/HistoryTest/History2'
 
 const HistoryTest2 = ({navigation}) => {
@@ -31,27 +29,7 @@ const HistoryTest2 = ({navigation}) => {
 
        <History2/>
 
-      <View style={styles.ContainerTabMenu}>
-      <TouchableOpacity style={styles.ContainerIcon} onPress={()=>navigation.navigate('Profile')} >
-        <IconTabMenu
-          name="user"
-          style={styles.menuIcon}
-        />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.ContainerIcon}>
-          <IconTabMenu
-          name="home"
-          style={styles.menuIcon}
-        />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.ContainerIconHistory}>
-          <IconTabMenuHistory
-          name="history"
-          style={styles.menuIcon}
-        />
-        </TouchableOpacity>
-       
-      </View>
+      <TapMenu navigation ={navigation} IconSelected={'History'} ></TapMenu>
     </ImageBackground>
   );
 };

@@ -31,11 +31,9 @@ export const styles = StyleSheet.create({
         marginLeft:10,
     },
     ContainerTabMenu:{
-        display:'flex',
         flexDirection:'row',
         justifyContent:'space-evenly',
         alignItems:'flex-end',
-        backgroundColor: colors.white,
         width: windowWidth/1,
         height: 70, 
     },
@@ -47,18 +45,16 @@ export const styles = StyleSheet.create({
         marginBottom:40,
         marginTop:60,
     },
+    ContainerDataResults:{
+         backgroundColor: colors.white,
+         borderRadius: 20, 
+         width: '90%',
+         height: '55%',
+         marginBottom:20,
+         marginTop:60,
+         marginHorizontal:20
+     },
     ContainerIcon:{
-        backgroundColor: colors.grayLogo,
-        borderRadius: 150, 
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: 50,
-        height: 50, 
-        marginTop:10,
-        marginBottom:10,
-    },
-    ContainerIconHistory:{
-        backgroundColor: colors.blue,
         borderRadius: 150, 
         justifyContent: 'center',
         alignItems: 'center',
@@ -76,8 +72,8 @@ export const styles = StyleSheet.create({
     },
   
     menuIcon: {
-        fontSize: 40,
-        color: colors.gray,
+        fontSize: 25,
+        color: colors.white,
       },
       peopleIcon: {
         fontSize: 100,

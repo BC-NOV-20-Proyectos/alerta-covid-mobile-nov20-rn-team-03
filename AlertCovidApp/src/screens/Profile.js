@@ -10,9 +10,7 @@ import {styles} from '../styles/Profile/index';
 import Icons from 'react-native-vector-icons/EvilIcons';
 import IconLogOut from 'react-native-vector-icons/Feather';
 import UserDataScrollView from '../components/atoms/Profile/UserDataScroll'
-
-import IconTabMenu from 'react-native-vector-icons/Feather';
-import IconTabMenuHistory from 'react-native-vector-icons/FontAwesome';
+import TapMenu from '../components/molecules/TapMenu'
 
 const Profile = ({navigation}) => {
   return (
@@ -44,35 +42,11 @@ const Profile = ({navigation}) => {
       <IconLogOut
         name="log-out"
         style={styles.cameraIcon}
+        size={30}
       />
         <Text style={{marginTop:8}}>Log Out</Text>
       </TouchableOpacity>
-
-      <View style={styles.ContainerTabMenu}>
-      <TouchableOpacity style={styles.ContainerIconProfile}>
-        <IconTabMenu
-          name="user"
-          style={styles.menuIcon}
-        />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.ContainerIconHome}>
-          <IconTabMenu
-          name="home"
-          style={styles.menuIcon}
-        />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.ContainerIconHistory} onPress={() => navigation.navigate('HistoryTest')}>
-          <IconTabMenuHistory
-          name="history"
-          style={styles.menuIcon}
-        />
-        </TouchableOpacity>
-       
-      </View>
-
-
-
-
+      <TapMenu navigation ={navigation} IconSelected={'User'}></TapMenu>
     </ImageBackground>
   );
 };

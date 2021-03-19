@@ -4,18 +4,28 @@ import {windowHeight, windowWidth} from '../../utils/Dimensions';
 
 export const styles = StyleSheet.create({
     containerHome:{
+        height: windowHeight,
+        width: windowWidth,
+    },
+    containerTitle:{
+        height: '20%',
+        borderColor: 'red',
+        borderWidth: 1
+    },
+    containerCenter:{
         justifyContent:'center',
-        alignItems:'center',
-        paddingHorizontal: '10%'
+        alignItems: 'center',
+        paddingHorizontal: '10%',
+        height: windowHeight/1.4
     },
     title:{
         color: colors.grayFont,
         fontSize:35,
         fontWeight: 'bold',
-        marginTop: '13%',
-        marginBottom:'1%',
+        marginTop:'5%',
         paddingLeft: '5%',
         paddingRight: '10%',
+        height : windowHeight/8,
     },
     ButtonWellBad:{
         width: 120,
@@ -26,12 +36,14 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
     },
     ButtonSquare:{
-        width: 120,
+        width: 130,
         height: 40,
         borderRadius: 10, 
         marginTop: 30,
+        marginBottom: 20,
         justifyContent: 'center',
         alignItems: 'center',
+        flexDirection: 'row'
     },
     ButtonLarge:{
         width: '60%',
@@ -40,7 +52,8 @@ export const styles = StyleSheet.create({
         marginTop: 30,
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom:'10%'
+        marginBottom:'10%',
+        flexDirection: 'row'
     },
     TextButton: {
         color: colors.white,
@@ -66,5 +79,10 @@ export const styles = StyleSheet.create({
         marginTop:'10%',
         textAlign: 'center',
         color:colors.grayFont
+    },
+    IconQr:{
+        color: colors.white,
+        marginRight: 10,
+        justifyContent:'center'
     }
 });

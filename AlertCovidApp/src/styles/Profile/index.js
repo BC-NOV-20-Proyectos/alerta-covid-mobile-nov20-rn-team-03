@@ -41,11 +41,11 @@ export const styles = StyleSheet.create({
     ContainerLogOut:{
         display:'flex',
         flexDirection:'row',
-        justifyContent:'space-evenly',
+        justifyContent: 'space-evenly',
         marginBottom:20,
         backgroundColor: colors.white,
         borderRadius: 20, 
-       
+        alignItems:'center',
         width: 300,
         height: 45, 
     },
@@ -112,7 +112,6 @@ export const styles = StyleSheet.create({
         color: colors.gray,
       },
     cameraIcon: {
-        fontSize: 40,
         color: colors.gray,
       },
       peopleIcon: {

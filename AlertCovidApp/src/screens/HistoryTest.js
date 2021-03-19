@@ -7,10 +7,8 @@ import {
   ImageBackground,
 } from 'react-native';
 import {styles} from '../styles/HistoryTest/index';
-import Icons from 'react-native-vector-icons/EvilIcons';
-import IconTabMenu from 'react-native-vector-icons/Feather';
-import IconTabMenuHistory from 'react-native-vector-icons/FontAwesome';
-import History from '../components/atoms/HistoryTest/History'
+import History from '../components/atoms/HistoryTest/History';
+import TapMenu from '../components/molecules/TapMenu'
 
 const HistoryTest = ({navigation}) => {
   return (
@@ -21,7 +19,7 @@ const HistoryTest = ({navigation}) => {
        <Text style={styles.TextTile}>History</Text>
       
       <View style={{display: 'flex', flexDirection: 'row',justifyContent:'space-between'}}>
-        <TouchableOpacity style={styles.ContainerSymptoms} onPress={()=>navigation.navigate('HistoryTest2')}>
+        <TouchableOpacity style={styles.ContainerSymptoms} onPress={()=>navigation.navigate('HistorySymptoms')}>
             <Text>Symptoms</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.ContainerTest} onPress={()=>navigation.navigate('HistoryTest')}>
@@ -30,28 +28,8 @@ const HistoryTest = ({navigation}) => {
       </View>
 
        <History />
-
-      <View style={styles.ContainerTabMenu}>
-      <TouchableOpacity style={styles.ContainerIcon} onPress={()=>navigation.navigate('Profile')} >
-        <IconTabMenu
-          name="user"
-          style={styles.menuIcon}
-        />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.ContainerIcon}>
-          <IconTabMenu
-          name="home"
-          style={styles.menuIcon}
-        />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.ContainerIconHistory}>
-          <IconTabMenuHistory
-          name="history"
-          style={styles.menuIcon}
-        />
-        </TouchableOpacity>
-       
-      </View>
+      <TapMenu navigation ={navigation}  IconSelected={'History'}></TapMenu>
+      
     </ImageBackground>
   );
 };
