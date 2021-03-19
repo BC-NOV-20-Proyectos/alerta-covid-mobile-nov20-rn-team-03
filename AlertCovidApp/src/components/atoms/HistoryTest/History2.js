@@ -4,7 +4,7 @@ import {colors} from '../../../utils/Colors';
 import {styles} from '../../../styles/HistoryTest/index';
 import IconTabMenu from 'react-native-vector-icons/Feather';
 
-const HistoryData = () => {
+const HistoryData = ({navigation}) => {
   return (
     <ScrollView style={styles.ContainerDataUser}>
     <View style={{borderBottomWidth: 1, marginTop:15, marginBottom:10}}>
@@ -26,7 +26,7 @@ const HistoryData = () => {
 
       <View style={{display: 'flex', flexDirection: 'row',justifyContent:'space-between',  marginLeft: 20}}>
         <Text style={{color:'#888888'}}>Feeling sick</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('InformationSymptoms')}>
         <IconTabMenu
           name="chevron-right"
           style={styles.menuIcon}

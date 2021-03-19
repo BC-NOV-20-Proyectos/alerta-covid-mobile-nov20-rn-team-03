@@ -1,5 +1,5 @@
 export const SymptomsConstants = {
-  HowYouFeelToday: 'How you feel today?',
+  Symptoms: 'Symptoms',
   Bad: 'Bad',
   Fever: 'Fever',
 };

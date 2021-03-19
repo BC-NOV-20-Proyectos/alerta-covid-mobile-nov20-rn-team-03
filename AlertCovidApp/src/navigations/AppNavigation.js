@@ -9,6 +9,8 @@ import HistoryTest2 from "../screens/HistoryTest2";
 import Symptoms from '../screens/Symptoms';
 import TestResult from '../screens/TestResult';
 import ScanQr from '../screens/ScanQr';
+import InformationSymptoms from '../screens/InformationSymptoms';
+
 const Stack = createStackNavigator();
 
 const AppNavigator = ()=>
@@ -23,6 +25,7 @@ const AppNavigator = ()=>
         <Stack.Screen name="Profile" options={{headerShown: false}} component={Profile}/>
         <Stack.Screen name="HistoryTest" options={{headerShown: false}} component={HistoryTest}/>
         <Stack.Screen name="HistoryTest2" options={{headerShown: false}} component={HistoryTest2}/>
+        <Stack.Screen name="InformationSymptoms" options={{headerShown: false}} component={InformationSymptoms}/>
       </Stack.Navigator>    
   );
 }

@@ -7,4 +7,6 @@ export const colors = {
   grayBottom:'#DBDBDB',
   grayFont: '#7b7a7a',
   grayTitle: '#7A6D6D',
+  grayLine: '#DCDCDC',
+  purple: '#EB43EE',
 };
