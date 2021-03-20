@@ -9,8 +9,6 @@ export const styles = StyleSheet.create({
     },
     containerTitle:{
         height: '20%',
-        borderColor: 'red',
-        borderWidth: 1
     },
     containerCenter:{
         justifyContent:'center',
@@ -31,7 +29,7 @@ export const styles = StyleSheet.create({
         width: 120,
         height: 40,
         borderRadius: 50, 
-        marginTop: 30,
+        marginTop: 10,
         justifyContent: 'center',
         alignItems: 'center',
     },

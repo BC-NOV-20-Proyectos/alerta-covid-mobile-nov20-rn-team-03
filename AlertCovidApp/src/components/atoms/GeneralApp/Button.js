@@ -6,7 +6,7 @@ import {colors} from '../../../utils/Colors'
 const Button = ({navigation, RouteGo, textButton, colorBackground}) => {
   return (
     <TouchableOpacity 
-    style={[styles.ButtonWellBad, {backgroundColor: textButton === 'WELL' ? colors.green : colors.gray},]} 
+    style={[styles.ButtonWellBad, {backgroundColor: textButton === 'WELL' ? colors.green : colors.orange},]} 
     onPress={ () => navigation.navigate(RouteGo)
     }>
       <Text style={styles.TextButton}>{textButton}</Text>
