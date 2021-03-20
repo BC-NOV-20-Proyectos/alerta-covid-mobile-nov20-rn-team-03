@@ -31,7 +31,8 @@ const HistoryData = () => {
         <TouchableOpacity>
         <IconTabMenu
           name="chevron-right"
-          style={styles.menuIcon}
+          style={styles.menuIconArrow}
+          size={20}
         />
        </TouchableOpacity>
 
@@ -59,7 +60,8 @@ const HistoryData = () => {
         <TouchableOpacity>
         <IconTabMenu
           name="chevron-right"
-          style={styles.menuIcon}
+          style={styles.menuIconArrow}
+          size={20}
         />
        </TouchableOpacity>
 

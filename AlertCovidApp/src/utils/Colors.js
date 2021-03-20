@@ -6,12 +6,9 @@ export const colors = {
   green:'#6cc955',
   grayBottom:'#DBDBDB',
   grayFont: '#7b7a7a',
-<<<<<<< HEAD
   orange: '#FF3C3C',
-  yellow: '#f1c232'
-=======
+  yellow: '#f1c232',
   grayTitle: '#7A6D6D',
   grayLine: '#DCDCDC',
   purple: '#EB43EE',
->>>>>>> b4abfd324b7c9203b0e165bad53ee98ae4e6212d
 };

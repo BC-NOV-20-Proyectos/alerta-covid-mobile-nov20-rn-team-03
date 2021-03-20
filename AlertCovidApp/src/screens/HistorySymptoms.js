@@ -27,7 +27,7 @@ const HistoryTest2 = ({navigation}) => {
           </TouchableOpacity>
       </View>
 
-       <History2/>
+       <History2 navigation={navigation}/>
 
       <TapMenu navigation ={navigation} IconSelected={'History'} ></TapMenu>
     </ImageBackground>

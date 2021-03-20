@@ -24,12 +24,8 @@ const AppNavigator = ()=>
         <Stack.Screen name="ScanQr" options={{headerShown: false}} component={ScanQr}/>                 
         <Stack.Screen name="Profile" options={{headerShown: false}} component={Profile}/>
         <Stack.Screen name="HistoryTest" options={{headerShown: false}} component={HistoryTest}/>
-<<<<<<< HEAD
         <Stack.Screen name="HistorySymptoms" options={{headerShown: false}} component={HistorySymptoms}/>
-=======
-        <Stack.Screen name="HistoryTest2" options={{headerShown: false}} component={HistoryTest2}/>
         <Stack.Screen name="InformationSymptoms" options={{headerShown: false}} component={InformationSymptoms}/>
->>>>>>> b4abfd324b7c9203b0e165bad53ee98ae4e6212d
       </Stack.Navigator>    
   );
 }

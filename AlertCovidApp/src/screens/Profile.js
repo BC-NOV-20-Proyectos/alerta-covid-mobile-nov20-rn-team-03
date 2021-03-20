@@ -28,6 +28,7 @@ const Profile = ({navigation}) => {
         <Icons
         name="camera"
         style={styles.cameraIcon}
+        size={30}
       />
         </TouchableOpacity>
       </View>
@@ -42,7 +43,7 @@ const Profile = ({navigation}) => {
       <IconLogOut
         name="log-out"
         style={styles.cameraIcon}
-        size={30}
+        size={40}
       />
         <Text style={{marginTop:8}}>Log Out</Text>
       </TouchableOpacity>

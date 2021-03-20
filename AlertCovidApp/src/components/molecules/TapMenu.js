@@ -13,18 +13,21 @@ const TapMenu = ({navigation, IconSelected}) => {
       <IconTabMenuHistory
         name="user"
         style={styles.menuIcon}
+        size={25}
       />
       </TouchableOpacity>
       <TouchableOpacity style={[styles.ContainerIcon, {backgroundColor: IconSelected === 'Home' ? colors.blue : colors.gray}]} onPress={()=>navigation.navigate('HomeScreen')} >
         <IconTabMenuHome
         name="home"
         style={styles.menuIcon}
+        size={25}
       />
       </TouchableOpacity>
       <TouchableOpacity style={[styles.ContainerIcon, {backgroundColor: IconSelected === 'History' ? colors.blue : colors.gray}]} onPress={()=>navigation.navigate('HistorySymptoms')}>
         <IconTabMenuHistory
         name="history"
         style={styles.menuIcon}
+        size={25}
       />
       </TouchableOpacity>    
     </View>

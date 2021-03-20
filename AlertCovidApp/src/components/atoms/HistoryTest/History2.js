@@ -26,10 +26,11 @@ const HistoryData = ({navigation}) => {
 
       <View style={{display: 'flex', flexDirection: 'row',justifyContent:'space-between',  marginLeft: 20}}>
         <Text style={{color:'#888888'}}>Feeling sick</Text>
-        <TouchableOpacity onPress={()=>navigation.navigate('InformationSymptoms')}>
+        <TouchableOpacity onPress={ () => navigation.navigate('InformationSymptoms')}>
         <IconTabMenu
           name="chevron-right"
-          style={styles.menuIcon}
+          style={styles.menuIconArrow}
+          size={20}
         />
        </TouchableOpacity>
 
@@ -57,7 +58,8 @@ const HistoryData = ({navigation}) => {
         <TouchableOpacity>
         <IconTabMenu
           name="chevron-right"
-          style={styles.menuIcon}
+          style={styles.menuIconArrow}
+          size={20}
         />
        </TouchableOpacity>
 

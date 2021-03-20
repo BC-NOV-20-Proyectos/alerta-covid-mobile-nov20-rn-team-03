@@ -1,14 +1,14 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, ScrollView} from 'react-native';
-import Title from '../Title';
+import Title from '../GeneralApp/TitleArrow';
 import BackgroundImage from '../BackgroundImage';
 import {styles} from '../../../styles/InformationSymptoms';
 
-const InformationSymptoms = () => {
+const InformationSymptoms = ({navigation}) => {
   return (
     <View style={styles.ScreenContainer}>
       <BackgroundImage></BackgroundImage>
-      <Title></Title>
+      <Title navigation={navigation} textTitle={'Information Symptoms'} RouteGo={'HistorySymptoms'}></Title>
       <View style={styles.Container}>
         <ScrollView>
         <View style={styles.InformationContainer}>

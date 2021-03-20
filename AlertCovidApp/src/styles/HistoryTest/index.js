@@ -70,9 +70,11 @@ export const styles = StyleSheet.create({
        marginRight:25,
        marginTop:15,
     },
+    menuIconArrow: {
+        color: colors.gray,
+    },
   
     menuIcon: {
-        fontSize: 25,
         color: colors.white,
       },
       peopleIcon: {

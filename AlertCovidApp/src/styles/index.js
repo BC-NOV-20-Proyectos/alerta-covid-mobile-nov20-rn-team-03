@@ -14,13 +14,8 @@ export const styles = StyleSheet.create({
         color: colors.grayFont,
         fontSize:35,
         fontWeight: 'bold',
-<<<<<<< HEAD
-        paddingVertical:10,
-        paddingLeft: '5%',
-=======
         paddingVertical:30,
         paddingLeft: '5%',  
->>>>>>> b4abfd324b7c9203b0e165bad53ee98ae4e6212d
         paddingRight: '10%'
     },
     containerTitleArrow:{
@@ -38,7 +33,7 @@ export const styles = StyleSheet.create({
     },
     titleArrow:{
         color: colors.grayFont,
-        fontSize:35,
+        fontSize:32,
         fontWeight: 'bold',
     },
 });

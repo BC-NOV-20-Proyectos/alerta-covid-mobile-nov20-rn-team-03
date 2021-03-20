@@ -76,7 +76,6 @@ export const styles = StyleSheet.create({
     },
   
     menuIcon: {
-        fontSize: 40,
         color: colors.gray,
       },
       peopleIcon: {
