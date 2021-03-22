@@ -6,7 +6,7 @@ import ButtonLogIn from '../components/atoms/LogIn/ButtonLogIn';
 import CreateAccountText from '../components/atoms/LogIn/CreateAccountText';
 import Background from '../components/atoms/LogIn/BackgroundLogin';
 import {LogInConstants} from '../utils/Constants/LogInConstants';
-import {styles} from '../styles/LogIn/index'; 
+import {styles} from '../styles/LogIn/index';
 
 const LogIn = ({navigation}) => {
   return (
@@ -22,9 +22,13 @@ const LogIn = ({navigation}) => {
         <Text style={styles.TextInput}>{LogInConstants.Email}</Text>
         <InputLogIn iconName={'mail'}></InputLogIn>
         <Text style={styles.TextInput}>{LogInConstants.Password}</Text>
-        <InputLogIn iconName={'lock'} text={LogInConstants.forgotPassword}></InputLogIn>
+        <InputLogIn
+          iconName={'lock'}
+          text={LogInConstants.forgotPassword}></InputLogIn>
       </View>
-      <ButtonLogIn navigation={navigation} RouteGo= {LogInConstants.HomeScreen}></ButtonLogIn>
+      <ButtonLogIn
+        navigation={navigation}
+        RouteGo={LogInConstants.HomeScreen}></ButtonLogIn>
       <CreateAccountText></CreateAccountText>
     </View>
   );

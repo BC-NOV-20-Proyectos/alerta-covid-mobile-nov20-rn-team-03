@@ -5,7 +5,9 @@ import {LogInConstants} from '../../../utils/Constants/LogInConstants';
 
 const ButtonLogIn = ({navigation, RouteGo}) => {
   return (
-    <TouchableOpacity style={styles.ButtonLogIn} onPress={ () => navigation.navigate(RouteGo)}>
+    <TouchableOpacity
+      style={styles.ButtonLogIn}
+      onPress={() => navigation.navigate(RouteGo)}>
       <Text style={styles.TextButton}>{LogInConstants.LogIn}</Text>
     </TouchableOpacity>
   );

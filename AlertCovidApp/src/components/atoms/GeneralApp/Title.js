@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import { styles } from '../../../styles/Home';
+import {styles} from '../../../styles/Home';
 
 const Title = ({textTitle}) => {
   return (

@@ -5,7 +5,8 @@ import InformationSymptomsScreen from '../components/atoms/InformationSymptoms/I
 const InformationSymptoms = ({navigation}) => {
   return (
     <View>
-      <InformationSymptomsScreen navigation={navigation}></InformationSymptomsScreen>
+      <InformationSymptomsScreen
+        navigation={navigation}></InformationSymptomsScreen>
     </View>
   );
 };

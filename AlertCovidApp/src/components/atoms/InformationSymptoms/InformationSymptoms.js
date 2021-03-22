@@ -8,29 +8,32 @@ const InformationSymptoms = ({navigation}) => {
   return (
     <View style={styles.ScreenContainer}>
       <BackgroundImage></BackgroundImage>
-      <Title navigation={navigation} textTitle={'Information Symptoms'} RouteGo={'HistorySymptoms'}></Title>
+      <Title
+        navigation={navigation}
+        textTitle={'Information Symptoms'}
+        RouteGo={'HistorySymptoms'}></Title>
       <View style={styles.Container}>
         <ScrollView>
-        <View style={styles.InformationContainer}>
-          <Text style={styles.Title}>Date Reported</Text>
-          <View style={styles.TextContainer}>
-            <Text style={styles.Text}>Date</Text>
-            <Text style={styles.Text}>10/03/2021</Text>
+          <View style={styles.InformationContainer}>
+            <Text style={styles.Title}>Date Reported</Text>
+            <View style={styles.TextContainer}>
+              <Text style={styles.Text}>Date</Text>
+              <Text style={styles.Text}>10/03/2021</Text>
+            </View>
+            <View style={styles.Line}></View>
+            <Text style={styles.Title}>How where you feeling?</Text>
+            <View style={styles.TextContainer}>
+              <Text style={styles.Text}>I wasn't feeling right</Text>
+            </View>
+            <View style={styles.Line}></View>
+            <Text style={styles.Title}>Symptoms</Text>
+            <View style={styles.TextContainerSymptoms}>
+              <Text style={styles.Text}>Fever</Text>
+              <Text style={styles.Text}>Cough</Text>
+              <Text style={styles.Text}>Pain chest with deep breaths</Text>
+            </View>
+            <View style={styles.Line}></View>
           </View>
-          <View style={styles.Line}></View>
-          <Text style={styles.Title}>How where you feeling?</Text>
-          <View style={styles.TextContainer}>
-            <Text style={styles.Text}>I wasn't feeling right</Text>
-          </View>
-          <View style={styles.Line}></View>
-          <Text style={styles.Title}>Symptoms</Text>
-          <View style={styles.TextContainerSymptoms}>
-            <Text style={styles.Text}>Fever</Text>
-            <Text style={styles.Text}>Cough</Text>
-            <Text style={styles.Text}>Pain chest with deep breaths</Text>
-          </View>
-          <View style={styles.Line}></View>
-        </View>
         </ScrollView>
       </View>
       <TouchableOpacity style={styles.Button}>

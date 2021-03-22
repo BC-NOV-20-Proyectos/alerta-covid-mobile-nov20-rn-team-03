@@ -6,5 +6,5 @@ export const SymptomsConstants = {
   fever: 'Fever or chills',
   cough: 'Cough',
   shortness: 'Shortness of breath or difficulty breathing',
-  save:'SAVE'
+  save: 'SAVE',
 };

@@ -9,8 +9,8 @@ import {
 import {styles} from '../styles/Profile/index';
 import Icons from 'react-native-vector-icons/EvilIcons';
 import IconLogOut from 'react-native-vector-icons/Feather';
-import UserDataScrollView from '../components/atoms/Profile/UserDataScroll'
-import TapMenu from '../components/molecules/TapMenu'
+import UserDataScrollView from '../components/atoms/Profile/UserDataScroll';
+import TapMenu from '../components/molecules/TapMenu';
 
 const Profile = ({navigation}) => {
   return (
@@ -19,17 +19,10 @@ const Profile = ({navigation}) => {
       style={styles.ImageBackground}>
       <View style={{display: 'flex', flexDirection: 'row'}}>
         <View style={styles.ContainerLogo}>
-        <Icons
-        name="user"
-        style={styles.peopleIcon}
-        />
+          <Icons name="user" style={styles.peopleIcon} />
         </View>
         <TouchableOpacity style={styles.ContainerIcon}>
-        <Icons
-        name="camera"
-        style={styles.cameraIcon}
-        size={30}
-      />
+          <Icons name="camera" style={styles.cameraIcon} size={30} />
         </TouchableOpacity>
       </View>
       <TouchableOpacity style={styles.ContainerPlaces}>
@@ -40,14 +33,10 @@ const Profile = ({navigation}) => {
       <UserDataScrollView />
 
       <TouchableOpacity style={styles.ContainerLogOut}>
-      <IconLogOut
-        name="log-out"
-        style={styles.cameraIcon}
-        size={40}
-      />
-        <Text style={{marginTop:8}}>Log Out</Text>
+        <IconLogOut name="log-out" style={styles.cameraIcon} size={40} />
+        <Text style={{marginTop: 8}}>Log Out</Text>
       </TouchableOpacity>
-      <TapMenu navigation ={navigation} IconSelected={'User'}></TapMenu>
+      <TapMenu navigation={navigation} IconSelected={'User'}></TapMenu>
     </ImageBackground>
   );
 };
