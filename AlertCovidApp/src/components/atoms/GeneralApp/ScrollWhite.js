@@ -9,40 +9,18 @@ const ScrollWhite = () => {
   return (
     <View style={styles.ContainerDataResults}>
       <View
-        style={{
-          borderBottomWidth: 1,
-          marginTop: 15,
-          marginBottom: 10,
-          marginHorizontal: 10,
-        }}>
+        style={styles.SubContainerDataUser}>
         <View
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'flex-start',
-            marginBottom: 5,
-            marginTop: 5,
-          }}>
+          style={styles.SubContainerTest}>
           <Text>Data Reported</Text>
         </View>
         <FormLine Label={'Date'} TextInput={'10/03/2021'}></FormLine>
       </View>
 
       <View
-        style={{
-          borderBottomWidth: 1,
-          marginTop: 15,
-          marginBottom: 10,
-          marginHorizontal: 10,
-        }}>
+        style={styles.SubContainerDataUser}>
         <View
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'flex-start',
-            marginBottom: 5,
-            marginTop: 5,
-          }}>
+          style={styles.SubContainerTest}>
           <Text>Test Result</Text>
         </View>
 

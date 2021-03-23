@@ -125,4 +125,38 @@ export const styles = StyleSheet.create({
   Text: {
     color: colors.gray,
   },
+  ContainerInformation: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 15,
+    marginRight: 15,
+    marginLeft: 20,
+  },
+  ContainerEmail: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginBottom: 5,
+    marginTop: 15,
+    marginLeft: 20,
+  },
+  ContainerPassword: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 5,
+    marginTop: 15,
+    marginLeft: 20,
+    marginRight: 15,
+  },
+  Line: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginLeft: 20,
+  },
+  LineTwo: {
+    borderBottomWidth: 1,
+    marginBottom: 8,
+    marginHorizontal: 10,
+  },
 });

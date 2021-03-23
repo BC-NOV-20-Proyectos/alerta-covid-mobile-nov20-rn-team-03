@@ -6,14 +6,7 @@ import IconTabMenu from 'react-native-vector-icons/Feather';
 const FormLine = ({Label, TextInput}) => {
   return (
     <View
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginLeft: 20,
-        marginBottom: 15,
-        marginTop: 2,
-      }}>
+      style={styles.FormContainer}>
       <Text style={styles.LabelForm}>{Label}</Text>
       <Text style={styles.TextInputForm}>{TextInput}</Text>
       <TouchableOpacity>

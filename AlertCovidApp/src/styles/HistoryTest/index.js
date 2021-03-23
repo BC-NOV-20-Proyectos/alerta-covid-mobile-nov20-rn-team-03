@@ -63,6 +63,40 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
   },
+  SubContainerDataUser: {
+    borderBottomWidth: 1,
+    marginTop: 15,
+    marginBottom: 10,
+    marginHorizontal: 10,
+  },
+  SubContainerTwoDataUser: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginBottom: 5,
+    marginTop: 5,
+  },
+  TestContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginLeft: 20,
+  },
+  FormContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginLeft: 20,
+    marginBottom: 15,
+    marginTop: 2,
+  },
+  SubContainerTest: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    marginBottom: 5,
+    marginTop: 5,
+  },
   TextTile: {
     fontSize: 30,
     color: colors.gray,
@@ -81,14 +115,14 @@ export const styles = StyleSheet.create({
     fontSize: 100,
     color: colors.gray,
   },
-  LabelForm:{
+  LabelForm: {
     color: colors.gray,
-    marginRight: 50
+    marginRight: 50,
   },
   TextInputForm: {
-    color: colors.gray
+    color: colors.gray,
   },
   Text: {
-    color: colors.gray
+    color: colors.gray,
   },
 });

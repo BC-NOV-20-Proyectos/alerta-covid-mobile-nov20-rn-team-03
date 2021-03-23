@@ -7,21 +7,8 @@ import IconTabMenu from 'react-native-vector-icons/Feather';
 const HistoryData = () => {
   return (
     <ScrollView style={styles.ContainerDataUser}>
-      <View
-        style={{
-          borderBottomWidth: 1,
-          marginTop: 15,
-          marginBottom: 10,
-          marginHorizontal: 10,
-        }}>
-        <View
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-around',
-            marginBottom: 5,
-            marginTop: 5,
-          }}>
+      <View style={styles.SubContainerDataUser}>
+        <View style={styles.SubContainerTwoDataUser}>
           <Text>Sunday</Text>
           <Text>28/03/2021</Text>
           <TouchableOpacity>
@@ -32,13 +19,7 @@ const HistoryData = () => {
           </TouchableOpacity>
         </View>
 
-        <View
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            marginLeft: 20,
-          }}>
+        <View style={styles.TestContainer}>
           <Text style={styles.ViralText}>Viral Test</Text>
           <TouchableOpacity>
             <IconTabMenu
@@ -50,21 +31,8 @@ const HistoryData = () => {
         </View>
       </View>
 
-      <View
-        style={{
-          borderBottomWidth: 1,
-          marginTop: 15,
-          marginBottom: 10,
-          marginHorizontal: 10,
-        }}>
-        <View
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-around',
-            marginBottom: 5,
-            marginTop: 5,
-          }}>
+      <View style={styles.SubContainerDataUser}>
+        <View style={styles.SubContainerTwoDataUser}>
           <Text>Friday</Text>
           <Text>03/03/2021</Text>
           <TouchableOpacity>
@@ -72,13 +40,7 @@ const HistoryData = () => {
           </TouchableOpacity>
         </View>
 
-        <View
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            marginLeft: 20,
-          }}>
+        <View style={styles.TestContainer}>
           <Text style={styles.Text}>Antibody Test</Text>
           <TouchableOpacity>
             <IconTabMenu
