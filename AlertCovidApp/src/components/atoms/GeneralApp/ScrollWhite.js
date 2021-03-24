@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import {colors} from '../../../utils/Colors';
 import {styles} from '../../../styles/HistoryTest/index';
+import {GeneralConstants} from '../../../utils/Constants/GeneralConstants'
 import IconTabMenu from 'react-native-vector-icons/Feather';
 import FormLine from '../GeneralApp/Form';
 
@@ -14,7 +15,7 @@ const ScrollWhite = () => {
           style={styles.SubContainerTest}>
           <Text>Data Reported</Text>
         </View>
-        <FormLine Label={'Date'} TextInput={'10/03/2021'}></FormLine>
+        <FormLine Label={GeneralConstants.date} TextInput={GeneralConstants.datedate}></FormLine>
       </View>
 
       <View
@@ -24,13 +25,13 @@ const ScrollWhite = () => {
           <Text>Test Result</Text>
         </View>
 
-        <FormLine Label={'Date of rest'} TextInput={'06/03/2021'}></FormLine>
-        <FormLine Label={'Date Result'} TextInput={'09/03/2021'}></FormLine>
-        <FormLine Label={'Test type'} TextInput={'Quick test'}></FormLine>
-        <FormLine Label={'Test result'} TextInput={'Test failed'}></FormLine>
+        <FormLine Label={GeneralConstants.dateofrest} TextInput={GeneralConstants.dateofrestdate}></FormLine>
+        <FormLine Label={GeneralConstants.dateResult} TextInput={GeneralConstants.dateResultDate}></FormLine>
+        <FormLine Label={GeneralConstants.Testtype} TextInput={GeneralConstants.Quicktest}></FormLine>
+        <FormLine Label={GeneralConstants.Testresult} TextInput={GeneralConstants.Testfailed}></FormLine>
         <FormLine
-          Label={'Symptoms on the day of test'}
-          TextInput={'Yes'}></FormLine>
+          Label={GeneralConstants.SymptomsTest}
+          TextInput={GeneralConstants.textInput}></FormLine>
       </View>
     </View>
   );
