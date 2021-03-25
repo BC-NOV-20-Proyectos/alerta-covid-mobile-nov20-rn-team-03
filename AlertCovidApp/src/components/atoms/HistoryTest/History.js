@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, ScrollView, TouchableOpacity} from 'react-native';
+import {History} from '../../../utils/Constants/History';
 import {colors} from '../../../utils/Colors';
 import {styles} from '../../../styles/HistoryTest/index';
 import IconTabMenu from 'react-native-vector-icons/Feather';
@@ -9,18 +10,18 @@ const HistoryData = () => {
     <ScrollView style={styles.ContainerDataUser}>
       <View style={styles.SubContainerDataUser}>
         <View style={styles.SubContainerTwoDataUser}>
-          <Text>Sunday</Text>
-          <Text>28/03/2021</Text>
+          <Text>{History.sunday}</Text>
+          <Text>{History.date}</Text>
           <TouchableOpacity>
-            <Text style={{fontSize: 10, color: colors.gray}}>Not Clear/</Text>
+            <Text style={styles.textHistory}>{History.notClear}</Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={{fontSize: 10, color: colors.gray}}>Test failed</Text>
+            <Text style={styles.textHistory}>{History.testFailed}</Text>
           </TouchableOpacity>
         </View>
 
         <View style={styles.TestContainer}>
-          <Text style={styles.ViralText}>Viral Test</Text>
+          <Text style={styles.ViralText}>{History.viral}</Text>
           <TouchableOpacity>
             <IconTabMenu
               name="chevron-right"
@@ -36,12 +37,12 @@ const HistoryData = () => {
           <Text>Friday</Text>
           <Text>03/03/2021</Text>
           <TouchableOpacity>
-            <Text style={{fontSize: 10, color: colors.gray}}>Negative</Text>
+            <Text style={styles.textHistory}>{History.negative}</Text>
           </TouchableOpacity>
         </View>
 
         <View style={styles.TestContainer}>
-          <Text style={styles.Text}>Antibody Test</Text>
+          <Text style={styles.Text}>{History.antibody}</Text>
           <TouchableOpacity>
             <IconTabMenu
               name="chevron-right"

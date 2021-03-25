@@ -125,4 +125,9 @@ export const styles = StyleSheet.create({
   Text: {
     color: colors.gray,
   },
+  textHistory:{
+    fontSize: 10, 
+    color: colors.gray
+  }
+
 });
