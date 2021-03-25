@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import {styles} from '../styles/HistoryTest/index2';
 import TapMenu from '../components/molecules/TapMenu';
-import History2 from '../components/atoms/HistoryTest/History2';
+import HistorySymptoms from '../components/atoms/HistoryTest/HistorySymptoms';
 
 const HistoryTest2 = ({navigation}) => {
   return (
@@ -32,7 +32,7 @@ const HistoryTest2 = ({navigation}) => {
         </TouchableOpacity>
       </View>
 
-      <History2 navigation={navigation} />
+      <HistorySymptoms navigation={navigation} />
 
       <TapMenu navigation={navigation} IconSelected={'History'}></TapMenu>
     </ImageBackground>

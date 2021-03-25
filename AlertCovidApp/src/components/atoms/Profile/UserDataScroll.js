@@ -1,44 +1,43 @@
 import React from 'react';
-import {View, Text, ScrollView, TouchableOpacity} from 'react-native';
+import {View, Text, ScrollView, TouchableOpacity, TextInput} from 'react-native';
+import {ProfileConstants} from '../../../utils/Constants/ProfileConstants'
 import {styles} from '../../../styles/Profile/index';
 
 const UserDataSrollView = () => {
   return (
     <ScrollView style={styles.ContainerDataUser}>
-      <View
-        style={styles.LineTwo}>
+      <View style={styles.LineTwo}>
         <View
           style={styles.ContainerInformation}>
-          <Text>FULL NAME</Text>
+          <Text>{ProfileConstants.fullName}</Text>
           <TouchableOpacity>
-            <Text>Change</Text>
+            <Text>{ProfileConstants.change}</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.Line}>
-          <Text style={styles.Text}>Jorge Ramirez Garcia</Text>
+          <TextInput placeholder={ProfileConstants.name}></TextInput>
         </View>
       </View>
       <View
         style={styles.LineTwo}>
         <View
           style={styles.ContainerEmail}>
-          <Text>EMAIL</Text>
+          <Text>{ProfileConstants.email}</Text>
         </View>
         <View style={styles.Line}>
-          <Text style={styles.Text}>jorgeramirezgarciaa@gmail.com</Text>
+          <TextInput placeholder={ProfileConstants.email}></TextInput>
         </View>
       </View>
-      <View
-        style={styles.LineTwo}>
+      <View style={styles.LineTwo}>
         <View
           style={styles.ContainerPassword}>
-          <Text>PASSWORD</Text>
+          <Text>{ProfileConstants.pass}</Text>
           <TouchableOpacity>
-            <Text>Change</Text>
+            <Text>{ProfileConstants.change}</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.Line}>
-          <Text style={styles.Text}>* * * * * * * * * *</Text>
+          <TextInput placeholder={ProfileConstants.pass}></TextInput>
         </View>
       </View>
     </ScrollView>
