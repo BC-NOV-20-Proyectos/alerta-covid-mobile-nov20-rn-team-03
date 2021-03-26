@@ -22,5 +22,4 @@ export const GeneralConstants = {
   Testfailed: 'Test failed',
   SymptomsTest: 'Symptoms on the day of test',
   textInput: 'Yes',
-  well:'WELL'
 };

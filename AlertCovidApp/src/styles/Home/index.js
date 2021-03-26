@@ -32,7 +32,9 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     justifyContent: 'center',
     alignItems: 'center',
+    
   },
+
   ButtonSquare: {
     width: 130,
     height: 40,
