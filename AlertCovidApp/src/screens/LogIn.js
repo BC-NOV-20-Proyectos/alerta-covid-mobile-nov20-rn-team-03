@@ -4,11 +4,14 @@ import TitleLogIn from '../components/atoms/LogIn/TitleLogIn';
 import InputLogIn from '../components/atoms/LogIn/InputLogIn';
 import ButtonLogIn from '../components/atoms/LogIn/ButtonLogIn';
 import CreateAccountText from '../components/atoms/LogIn/CreateAccountText';
-import Background from '../components/atoms/LogIn/BackgroundLogin';
+import Backglround from '../components/atoms/LogIn/BackgroundLogin';
 import {LogInConstants} from '../utils/Constants/LogInConstants';
 import {styles} from '../styles/LogIn/index';
 
+
 const LogIn = ({navigation}) => {
+
+
   return (
     <View style={styles.Background}>
       <Background></Background>
@@ -20,11 +23,11 @@ const LogIn = ({navigation}) => {
       <TitleLogIn></TitleLogIn>
       <View style={styles.containerForm}>
         <Text style={styles.TextInput}>{LogInConstants.Email}</Text>
-        <InputLogIn iconName={'mail'}></InputLogIn>
+        <InputLogIn iconName={'mail'} label={'email'} ></InputLogIn>
         <Text style={styles.TextInput}>{LogInConstants.Password}</Text>
         <InputLogIn
           iconName={'lock'}
-          text={LogInConstants.forgotPassword}></InputLogIn>
+          text={LogInConstants.forgotPassword} label={'password'}></InputLogIn>
       </View>
       <ButtonLogIn
         navigation={navigation}
