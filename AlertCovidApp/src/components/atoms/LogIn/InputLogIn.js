@@ -3,18 +3,8 @@ import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import {styles} from '../../../styles/LogIn';
 import Icons from 'react-native-vector-icons/Feather';
 import {colors} from '../../../utils/Colors';
-import { useFormik } from 'formik';
 
-const InputLogIn = ({PlaceHolderText, iconName, text, label}) => {
-  const {values, isSubmitting, setFieldValue, handleSubmit} = useFormik({
-    initialValues: {
-      email: '',
-      password: '',
-    },
-    onSubmit: values => {
-      // alert(JSON.stringify(values, null, 2));
-    },
-  });
+const InputLogIn = ({PlaceHolderText, iconName, text, label,click,setUserEmail, setUserPass }) => {
 
   return (
     <View style={styles.Input}>
@@ -28,10 +18,21 @@ const InputLogIn = ({PlaceHolderText, iconName, text, label}) => {
         placeholder={PlaceHolderText}
         style={styles.input}
         secureTextEntry={iconName === 'lock' && true}
-        value={label === 'email' ? values.email : values.password}
-        onChangeText ={text => setFieldValue(label, text)}></TextInput>
+        onChangeText={(text)=>{
+          if(PlaceHolderText === 'Email'){
+            setUserEmail('email',text)
+          }else{
+            setUserPass('password',text)
+          }
+          
+        }}
+        //onChangeText ={text => setFieldValue(label, text)}
+        >
+      </TextInput>
       <TouchableOpacity>
-        <Text style={styles.forgotPass}>{text}</Text>
+        <Text style={styles.forgotPass} onPress={()=>{
+          click();
+        }}>{text}</Text>
       </TouchableOpacity>
     </View>
   );
