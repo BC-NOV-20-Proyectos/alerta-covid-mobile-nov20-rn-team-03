@@ -24,15 +24,12 @@ const InputLogIn = ({PlaceHolderText, iconName, text, label,click,setUserEmail, 
           }else{
             setUserPass('password',text)
           }
-          
         }}
         //onChangeText ={text => setFieldValue(label, text)}
         >
       </TextInput>
       <TouchableOpacity>
-        <Text style={styles.forgotPass} onPress={()=>{
-          click();
-        }}>{text}</Text>
+        <Text style={styles.forgotPass} >{text}</Text>
       </TouchableOpacity>
     </View>
   );

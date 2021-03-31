@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {View, Text, Image, ImageBackground} from 'react-native';
 import TitleLogIn from '../components/atoms/LogIn/TitleLogIn';
 import InputLogIn from '../components/atoms/LogIn/InputLogIn';
@@ -11,8 +11,8 @@ import { useFormik } from 'formik';
 
 
 const LogIn = ({navigation}) => {
-
-  const {values, isSubmitting, setFieldValue, handleSubmit} = useFormik({
+  const [formError, setFormError] = useState({});
+  const {values, isSubmitting, setFieldValue, handleSubmit, touched} = useFormik({
     initialValues: {
       email: '',
       password: '',
@@ -26,7 +26,19 @@ const LogIn = ({navigation}) => {
       //.then(response => response.json())
       //.then(data => console.log(data));
     },
+    validate: values => {
+      let errors = {};
+      if (!values.email) {
+        errors.email = true;
+      } else if (
+        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+      ) {
+        errors.email = true;
+      }
+      setFormError(errors);
+    },
   });
+  
 
   return (
     <View style={styles.Background}>
@@ -40,11 +52,18 @@ const LogIn = ({navigation}) => {
       <View style={styles.containerForm}>
         <Text style={styles.TextInput}>{LogInConstants.Email}</Text>
         <InputLogIn PlaceHolderText={'Email'} iconName={'mail'} label={'email'} setUserEmail={setFieldValue} ></InputLogIn>
+      
+        {formError.email  && (
+            <Text  style={styles.errortext}>Insert your Email</Text>
+          )}
+
         <Text style={styles.TextInput}>{LogInConstants.Password}</Text>
         <InputLogIn
           iconName={'lock'}
           PlaceHolderText={'Password'}
           text={LogInConstants.forgotPassword} label={'password'} setUserPass={setFieldValue}></InputLogIn>
+      
+       
       </View>
       <ButtonLogIn
         navigation={navigation}
