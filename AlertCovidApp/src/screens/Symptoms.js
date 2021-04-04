@@ -22,17 +22,17 @@ const Symptoms = ({navigation}) => {
      
         <Card >
           <Card.Title>{SymptomsConstants.commonSymptoms}</Card.Title>
-          <Card.Divider/>
-          <Card.Image style={{borderRadius:0, width:280,height:90}} source={require('../assets/images/prevencionCovid.png')}>
-          </Card.Image>
           <CheckboxSymptoms  Symptom={SymptomsConstants.fever} />
+          <Card.Divider/>
           <CheckboxSymptoms Symptom={SymptomsConstants.cough} />
+          <Card.Divider/>
           <CheckboxSymptoms Symptom={SymptomsConstants.fatigue} />
-          <ButtonSecond navigation={navigation} RouteGo={'HistorySymptoms'} textButton={SymptomsConstants.next} />
+          <Card.Divider/>
+          <CheckboxSymptoms Symptom={SymptomsConstants.sense} />
         </Card>
-  
+          <ButtonSecond navigation={navigation} RouteGo={'SevereSymptoms'} textButton={SymptomsConstants.next} />
+      
         <TapMenu navigation={navigation} IconSelected={'Home'}/>
-
       </View>
     </View>
   );

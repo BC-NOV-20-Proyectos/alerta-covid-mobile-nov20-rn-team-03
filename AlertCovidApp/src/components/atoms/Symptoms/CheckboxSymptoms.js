@@ -6,9 +6,8 @@ import {CheckBox} from 'react-native-elements';
 const CheckboxSymptoms = ({Symptom}) => {
   const [check, isCheck] = useState(false);
   const [formSymptons, setFormSymptoms] = useState({});
-   console.log(formSymptons);
+
   return (
-    
     <CheckBox
       title={Symptom}
       checked={check}

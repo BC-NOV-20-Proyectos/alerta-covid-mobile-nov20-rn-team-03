@@ -96,5 +96,7 @@ export const styles = StyleSheet.create({
   },
   errortext:{
     color:colors.white,
+    marginTop:16,
+    marginLeft:80,
   }
 });

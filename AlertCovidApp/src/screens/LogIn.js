@@ -28,18 +28,23 @@ const LogIn = ({navigation}) => {
     },
     validate: values => {
       let errors = {};
-      if (!values.email) {
-        errors.email = true;
-      } else if (
+
+      if (!values.email ) {
+        errors.email = 'Insert your Email';
+        
+      }
+      else if (
         !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
       ) {
-        errors.email = true;
+        errors.email = 'Invalid Email';
       }
+      else if( !values.password){
+        errors.password='Insert your Password';
+      } 
       setFormError(errors);
     },
   });
   
-
   return (
     <View style={styles.Background}>
       <Background></Background>
@@ -50,20 +55,28 @@ const LogIn = ({navigation}) => {
       </View>
       <TitleLogIn></TitleLogIn>
       <View style={styles.containerForm}>
-        <Text style={styles.TextInput}>{LogInConstants.Email}</Text>
+        <View style={{flexDirection:'row'}}> 
+          <Text style={styles.TextInput}>{LogInConstants.Email}</Text>
+          {formError.email  && (
+              <Text  style={styles.errortext}>{formError.email}</Text>
+            )}
+        </View>
         <InputLogIn PlaceHolderText={'Email'} iconName={'mail'} label={'email'} setUserEmail={setFieldValue} ></InputLogIn>
       
-        {formError.email  && (
-            <Text  style={styles.errortext}>Insert your Email</Text>
+    
+       <View  style={{flexDirection:'row'}}> 
+           <Text style={styles.TextInput}>{LogInConstants.Password}</Text>
+           {formError.password  && (
+            <Text  style={styles.errortext}>{formError.password}</Text>
           )}
 
-        <Text style={styles.TextInput}>{LogInConstants.Password}</Text>
+       </View>
+        
         <InputLogIn
           iconName={'lock'}
           PlaceHolderText={'Password'}
           text={LogInConstants.forgotPassword} label={'password'} setUserPass={setFieldValue}></InputLogIn>
-      
-       
+     
       </View>
       <ButtonLogIn
         navigation={navigation}

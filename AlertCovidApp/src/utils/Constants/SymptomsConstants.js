@@ -11,4 +11,10 @@ export const SymptomsConstants = {
   sorethroat:'Sore throat',
   commonSymptoms:'MOST COMMON SYMPTOMS',
   next: 'Next',
+  sense: 'Loss of sense of smell or taste',
+  severeSymptoms:'SEVERE SYMPTOMS',
+  breathing:'Difficulty breathing or feeling short of breath',
+  Chest_pain: 'Chest pain or pressure', 
+  move:'Inability to speak or move',
+  fingers:'Loss of color in the fingers or toes',
 };
