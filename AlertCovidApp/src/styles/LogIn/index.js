@@ -96,6 +96,5 @@ export const styles = StyleSheet.create({
   },
   errortext:{
     color:colors.white,
-
   }
 });

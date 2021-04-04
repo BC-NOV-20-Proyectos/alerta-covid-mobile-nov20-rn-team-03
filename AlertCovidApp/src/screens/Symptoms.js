@@ -1,13 +1,16 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text,ScrollView} from 'react-native';
 import Title from '../components/atoms/GeneralApp/TitleArrow';
-import Button from '../components/atoms/GeneralApp/Button';
+import ButtonRoute from '../components/atoms/GeneralApp/Button';
 import ButtonSymptoms from '../components/atoms/Symptoms/ButtonSymptoms';
 import ButtonSecond from '../components/atoms/GeneralApp/ButtonSecond'
 import TapMenu from '../components/molecules/TapMenu'
 import {SymptomsConstants} from '../utils/Constants/SymptomsConstants';
 import {styles} from '../styles/Symptoms'
 import BackgroundImage from '../components/atoms/BackgroundImage';
+import CheckboxSymptoms from '../components/atoms/Symptoms/CheckboxSymptoms';
+import { Card,ListItem, Button, Icon} from 'react-native-elements';
+
 
 const Symptoms = ({navigation}) => {
   return (
@@ -15,23 +18,20 @@ const Symptoms = ({navigation}) => {
       <BackgroundImage></BackgroundImage>
       <Title navigation={navigation} textTitle={SymptomsConstants.Symptoms} RouteGo={SymptomsConstants.homeScreen}></Title>
       <View style={styles.containerSymptoms}>
-        <Button navigation={navigation} textButton={SymptomsConstants.Bad} RouteGo={'Symptoms'} />
-        <View style={styles.containerButtons}>
-          <ButtonSymptoms navigation={navigation} textButton={SymptomsConstants.fever}/>
-          <ButtonSymptoms navigation={navigation} textButton={SymptomsConstants.cough}/>
-          <ButtonSymptoms navigation={navigation} textButton={SymptomsConstants.shortness}/>
-          <ButtonSymptoms navigation={navigation} textButton={SymptomsConstants.fever}/>
-          <ButtonSymptoms navigation={navigation} textButton={SymptomsConstants.cough}/>
-          <ButtonSymptoms navigation={navigation} textButton={SymptomsConstants.shortness}/>
-          <ButtonSymptoms navigation={navigation} textButton={SymptomsConstants.fever}/>
-          <ButtonSymptoms navigation={navigation} textButton={SymptomsConstants.cough}/>
-          <ButtonSymptoms navigation={navigation} textButton={SymptomsConstants.shortness}/>
-          <ButtonSymptoms navigation={navigation} textButton={SymptomsConstants.fever}/>
-        </View>
-
-        <ButtonSecond navigation={navigation} RouteGo={'HistorySymptoms'} textButton={SymptomsConstants.save} />
+        <ButtonRoute navigation={navigation} textButton={SymptomsConstants.Bad} RouteGo={'Symptoms'} />
+     
+        <Card >
+          <Card.Title>{SymptomsConstants.commonSymptoms}</Card.Title>
+          <Card.Divider/>
+          <Card.Image style={{borderRadius:0, width:280,height:90}} source={require('../assets/images/prevencionCovid.png')}>
+          </Card.Image>
+          <CheckboxSymptoms  Symptom={SymptomsConstants.fever} />
+          <CheckboxSymptoms Symptom={SymptomsConstants.cough} />
+          <CheckboxSymptoms Symptom={SymptomsConstants.fatigue} />
+          <ButtonSecond navigation={navigation} RouteGo={'HistorySymptoms'} textButton={SymptomsConstants.next} />
+        </Card>
+  
         <TapMenu navigation={navigation} IconSelected={'Home'}/>
-
 
       </View>
     </View>

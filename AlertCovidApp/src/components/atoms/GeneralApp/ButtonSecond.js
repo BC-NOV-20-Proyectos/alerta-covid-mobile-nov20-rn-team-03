@@ -10,7 +10,7 @@ const Button = ({navigation, RouteGo, textButton}) => {
         styles.ButtonWellBad,
         {
           backgroundColor:
-            textButton === 'SAVE' ? colors.yellow : colors.orange,
+            textButton === 'SAVE' ? colors.yellow : colors.blue,
           marginBottom: 10,
         },
       ]}

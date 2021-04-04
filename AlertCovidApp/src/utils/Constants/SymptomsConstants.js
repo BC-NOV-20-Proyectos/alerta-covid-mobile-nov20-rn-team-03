@@ -4,7 +4,11 @@ export const SymptomsConstants = {
   Fever: 'Fever',
   homeScreen: 'HomeScreen',
   fever: 'Fever or chills',
-  cough: 'Cough',
+  cough: 'Dry Cough',
   shortness: 'Shortness of breath or difficulty breathing',
   save: 'SAVE',
+  fatigue: 'Fatigue',
+  sorethroat:'Sore throat',
+  commonSymptoms:'MOST COMMON SYMPTOMS',
+  next: 'Next',
 };
