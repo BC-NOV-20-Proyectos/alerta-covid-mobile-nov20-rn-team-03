@@ -32,7 +32,6 @@ const InputLogIn = ({
             setUserPass('password', text);
           }
         }}
-        //onChangeText ={text => setFieldValue(label, text)}
       ></TextInput>
       <TouchableOpacity>
         <Text style={styles.forgotPass}>{text}</Text>

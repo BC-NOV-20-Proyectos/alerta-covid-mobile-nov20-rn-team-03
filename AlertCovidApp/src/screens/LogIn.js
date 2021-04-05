@@ -23,12 +23,8 @@ const LogIn = ({navigation}) => {
       password: '',
     },
     onSubmit: (values) => {
-      //Aqui se hace la petición al endpoint de la API//
       console.log(values.email);
       console.log(values.password);
-      //fetch('http://example.com/movies.json')
-      //.then(response => response.json())
-      //.then(data => console.log(data));
     },
     validate: (values) => {
       let errors = {};

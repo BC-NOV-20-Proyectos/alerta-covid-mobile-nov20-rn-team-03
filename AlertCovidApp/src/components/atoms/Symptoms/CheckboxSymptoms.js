@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {View} from 'react-native';
 import {CheckBox} from 'react-native-elements';
 
-
 const CheckboxSymptoms = ({Symptom}) => {
   const [check, isCheck] = useState(false);
   const [formSymptons, setFormSymptoms] = useState({});
