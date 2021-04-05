@@ -9,6 +9,7 @@ import Symptoms from '../screens/Symptoms';
 import TestResult from '../screens/TestResult';
 import ScanQr from '../screens/ScanQr';
 import InformationSymptoms from '../screens/InformationSymptoms';
+import SevereSymptoms from '../screens/SevereSymptoms';
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,7 @@ const AppNavigator = ()=>
         <Stack.Screen name="HistoryTest" options={{headerShown: false}} component={HistoryTest}/>
         <Stack.Screen name="HistorySymptoms" options={{headerShown: false}} component={HistorySymptoms}/>
         <Stack.Screen name="InformationSymptoms" options={{headerShown: false}} component={InformationSymptoms}/>
+        <Stack.Screen name="SevereSymptoms" options={{headerShown: false}} component={SevereSymptoms}/>
       </Stack.Navigator>    
   );
 }

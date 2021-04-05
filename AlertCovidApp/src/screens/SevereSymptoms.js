@@ -12,25 +12,26 @@ import CheckboxSymptoms from '../components/atoms/Symptoms/CheckboxSymptoms';
 import { Card,ListItem, Button, Icon} from 'react-native-elements';
 
 
-const Symptoms = ({navigation}) => {
+const SevereSymptoms = ({navigation}) => {
   return (
     <View>
       <BackgroundImage></BackgroundImage>
-      <Title navigation={navigation} textTitle={SymptomsConstants.Symptoms} RouteGo={SymptomsConstants.homeScreen}></Title>
+      <Title navigation={navigation} textTitle={SymptomsConstants.Symptoms} RouteGo={SymptomsConstants.Symptoms}></Title>
       <View style={styles.containerSymptoms}>
         <ButtonRoute navigation={navigation} textButton={SymptomsConstants.Bad} RouteGo={'Symptoms'} />
      
         <Card >
-          <Card.Title>{SymptomsConstants.commonSymptoms}</Card.Title>
-          <CheckboxSymptoms  Symptom={SymptomsConstants.fever} />
+          <Card.Title>{SymptomsConstants.severeSymptoms}</Card.Title>
           <Card.Divider/>
-          <CheckboxSymptoms Symptom={SymptomsConstants.cough} />
-          <Card.Divider/>
-          <CheckboxSymptoms Symptom={SymptomsConstants.fatigue} />
-          <Card.Divider/>
-          <CheckboxSymptoms Symptom={SymptomsConstants.sense} />
+          <CheckboxSymptoms  Symptom={SymptomsConstants.breathing} />
+    
+          <CheckboxSymptoms Symptom={SymptomsConstants.Chest_pain} />
+         
+          <CheckboxSymptoms Symptom={SymptomsConstants.move} />
+      
+          <CheckboxSymptoms Symptom={SymptomsConstants.fingers} />
         </Card>
-          <ButtonSecond navigation={navigation} RouteGo={'SevereSymptoms'} textButton={SymptomsConstants.next} />
+          <ButtonSecond navigation={navigation} RouteGo={'HistorySymptoms'} textButton={SymptomsConstants.save} />
       
         <TapMenu navigation={navigation} IconSelected={'Home'}/>
       </View>
@@ -38,4 +39,4 @@ const Symptoms = ({navigation}) => {
   );
 };
 
-export default Symptoms;
+export default SevereSymptoms;

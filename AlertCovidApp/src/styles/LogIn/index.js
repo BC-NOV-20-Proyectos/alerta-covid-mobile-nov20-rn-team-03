@@ -94,4 +94,9 @@ export const styles = StyleSheet.create({
     width: 32,
     height: 32,
   },
+  errortext:{
+    color:colors.white,
+    marginTop:16,
+    marginLeft:80,
+  }
 });

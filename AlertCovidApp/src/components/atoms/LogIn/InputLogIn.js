@@ -4,7 +4,15 @@ import {styles} from '../../../styles/LogIn';
 import Icons from 'react-native-vector-icons/Feather';
 import {colors} from '../../../utils/Colors';
 
-const InputLogIn = ({PlaceHolderText, iconName, text}) => {
+const InputLogIn = ({
+  PlaceHolderText,
+  iconName,
+  text,
+  label,
+  click,
+  setUserEmail,
+  setUserPass,
+}) => {
   return (
     <View style={styles.Input}>
       <Icons
@@ -16,7 +24,15 @@ const InputLogIn = ({PlaceHolderText, iconName, text}) => {
       <TextInput
         placeholder={PlaceHolderText}
         style={styles.input}
-        secureTextEntry={iconName === 'lock' && true}></TextInput>
+        secureTextEntry={iconName === 'lock' && true}
+        onChangeText={(text) => {
+          if (PlaceHolderText === 'Email') {
+            setUserEmail('email', text);
+          } else {
+            setUserPass('password', text);
+          }
+        }}
+      ></TextInput>
       <TouchableOpacity>
         <Text style={styles.forgotPass}>{text}</Text>
       </TouchableOpacity>
