@@ -36,7 +36,7 @@ const HomeScreen = ({navigation}) => {
         <Text style={styles.textKeep}>{GeneralConstants.keepFriends}</Text>
         <ButtonSquare
           navigation={navigation}
-          RouteGo={'ScanQr'}
+          RouteGo={'CameraQR'}
           textButton={GeneralConstants.scanQr}></ButtonSquare>
       </View>
       <TapMenu navigation={navigation} IconSelected={'Home'} />

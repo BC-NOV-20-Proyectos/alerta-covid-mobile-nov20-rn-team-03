@@ -17,4 +17,18 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 20,
   },
+  containerMainQR: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  containerQR: {
+    width: '100%',
+    marginHorizontal: '5%',
+    height: '72%',
+    backgroundColor: colors.white,
+    marginVertical: '5%',
+    borderRadius: 30,
+    paddingVertical: 20,
+  },
+  
 });

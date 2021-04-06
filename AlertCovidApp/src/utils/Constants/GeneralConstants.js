@@ -10,6 +10,7 @@ export const GeneralConstants = {
   testResultsTitle: 'Test Result',
   save: 'SAVE',
   scanqr: 'My Places',
+  QRtitle: 'Scan the QR code',
   date: 'Date',
   datedate:'10/03/2021',
   dateofrest:'Date of rest',
