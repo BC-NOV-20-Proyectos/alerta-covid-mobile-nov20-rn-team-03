@@ -23,10 +23,6 @@ const LogIn = ({navigation}) => {
       password: '',
     },
     onSubmit: (values) => {
-      console.log(values.email);
-      console.log(values.password);
-    },
-    validate: (values) => {
       let errors = {};
 
       if (!values.email) {
@@ -36,11 +32,18 @@ const LogIn = ({navigation}) => {
       ) {
         errors.email = 'Invalid Email';
       }
+      else
+      {
+        navigation.navigate('HomeScreen')
+        console.log(values.email);
+        console.log(values.password);
+      }
       if (!values.password) {
         errors.password = 'Insert your Password';
       }
       setFormError(errors);
     },
+    
   });
 
   return (

@@ -13,7 +13,7 @@ const TestResults = ({navigation}) => {
       <Title
         navigation={navigation}
         textTitle={GeneralConstants.scanqr}
-        RouteGo={'HomeScreen'}
+        RouteGo={'CameraQR'}
       />
       <View style={styles.containerPlaces}>
         <View
@@ -23,7 +23,7 @@ const TestResults = ({navigation}) => {
             justifyContent: 'space-between',
           }}>
           <TouchableOpacity style={styles.ContainerSymptoms}>
-            <Text>My Places</Text>
+            <Text>My places</Text>
           </TouchableOpacity>
         </View>
       </View>
