@@ -18,7 +18,7 @@ const LogIn = ({navigation}) => {
     const fetchDataUser = async () => {
       try {
         const response = await Axios({
-          url:"https://ancient-citadel-41771.herokuapp.com/users/sign_in",
+          url:"https://ancient-citadel-41771.herokuapp.com/api/v1/login",
         });
 
         setDataUser(response.data);
