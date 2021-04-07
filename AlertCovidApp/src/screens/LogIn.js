@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import {View, Text, Image, ImageBackground} from 'react-native';
 import TitleLogIn from '../components/atoms/LogIn/TitleLogIn';
 import InputLogIn from '../components/atoms/LogIn/InputLogIn';
@@ -8,9 +8,32 @@ import Background from '../components/atoms/LogIn/BackgroundLogin';
 import {LogInConstants} from '../utils/Constants/LogInConstants';
 import {styles} from '../styles/LogIn/index';
 import {useFormik} from 'formik';
+import Axios from 'axios';
 
 const LogIn = ({navigation}) => {
   const [formError, setFormError] = useState({});
+  
+  const [dataUser, setDataUser] = useState([]);
+  useEffect(() => {
+    const fetchDataUser = async () => {
+      try {
+        const response = await Axios({
+          url:"https://ancient-citadel-41771.herokuapp.com/users/sign_in",
+        });
+
+        setDataUser(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchDataUser();
+  }, [setDataUser]);
+
+
+console.log(dataUser);
+
+
   const {
     values,
     isSubmitting,
