@@ -8,31 +8,10 @@ import Background from '../components/atoms/LogIn/BackgroundLogin';
 import {LogInConstants} from '../utils/Constants/LogInConstants';
 import {styles} from '../styles/LogIn/index';
 import {useFormik} from 'formik';
-import Axios from 'axios';
+import axios from 'axios';
 
 const LogIn = ({navigation}) => {
   const [formError, setFormError] = useState({});
-  
-  const [dataUser, setDataUser] = useState([]);
-  useEffect(() => {
-    const fetchDataUser = async () => {
-      try {
-        const response = await Axios({
-          url:"https://ancient-citadel-41771.herokuapp.com/api/v1/login",
-        });
-
-        setDataUser(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchDataUser();
-  }, [setDataUser]);
-
-
-console.log(dataUser);
-
 
   const {
     values,
@@ -56,7 +35,21 @@ console.log(dataUser);
         errors.email = 'Invalid Email';
       }
       else
-      {
+      {        
+
+        axios.post('https://ancient-citadel-41771.herokuapp.com/api/v1/login', {
+          "user":{
+          "email": values.email,
+          "password": values.password                        
+        }            
+        })
+        .then((response) => {
+          console.log(response);
+        }, (error) => {
+          console.log(error);
+        });
+    
+           
         navigation.navigate('HomeScreen')
         console.log(values.email);
         console.log(values.password);
