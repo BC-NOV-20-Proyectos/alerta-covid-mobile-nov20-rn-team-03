@@ -56,8 +56,7 @@ const LogIn = ({navigation}) => {
         errors.password = 'Insert your Password';
       }
       setFormError(errors);
-    },
-    
+    },    
   });
 
   return (
