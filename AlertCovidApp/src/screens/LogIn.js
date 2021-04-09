@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Image, ImageBackground} from 'react-native';
+import {View, Text, Image, Alert} from 'react-native';
 import TitleLogIn from '../components/atoms/LogIn/TitleLogIn';
 import InputLogIn from '../components/atoms/LogIn/InputLogIn';
 import ButtonLogIn from '../components/atoms/LogIn/ButtonLogIn';
@@ -8,9 +8,11 @@ import Background from '../components/atoms/LogIn/BackgroundLogin';
 import {LogInConstants} from '../utils/Constants/LogInConstants';
 import {styles} from '../styles/LogIn/index';
 import {useFormik} from 'formik';
+import axios from 'axios';
 
 const LogIn = ({navigation}) => {
   const [formError, setFormError] = useState({});
+
   const {
     values,
     isSubmitting,
@@ -33,17 +35,28 @@ const LogIn = ({navigation}) => {
         errors.email = 'Invalid Email';
       }
       else
-      {
-        navigation.navigate('HomeScreen')
-        console.log(values.email);
-        console.log(values.password);
+      {                
+        axios.post('https://ancient-citadel-41771.herokuapp.com/api/v1/login', {
+          "user":{
+          "email": values.email,
+          "password": values.password                        
+        }            
+        })
+        .then((response) => {         
+          var acceso=response.data.success        
+         
+          if (acceso === true){
+            navigation.navigate('HomeScreen')
+          }                 
+        }, (error) => {
+          Alert.alert("unregistered user!!")         
+        });
       }
       if (!values.password) {
         errors.password = 'Insert your Password';
       }
       setFormError(errors);
-    },
-    
+    },    
   });
 
   return (
