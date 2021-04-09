@@ -1,5 +1,5 @@
-import React, {useState,useEffect} from 'react';
-import {View, Text, Image, ImageBackground} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, Image, Alert} from 'react-native';
 import TitleLogIn from '../components/atoms/LogIn/TitleLogIn';
 import InputLogIn from '../components/atoms/LogIn/InputLogIn';
 import ButtonLogIn from '../components/atoms/LogIn/ButtonLogIn';
@@ -35,24 +35,22 @@ const LogIn = ({navigation}) => {
         errors.email = 'Invalid Email';
       }
       else
-      {        
-
+      {                
         axios.post('https://ancient-citadel-41771.herokuapp.com/api/v1/login', {
           "user":{
           "email": values.email,
           "password": values.password                        
         }            
         })
-        .then((response) => {
-          console.log(response);
+        .then((response) => {         
+          var acceso=response.data.success        
+         
+          if (acceso === true){
+            navigation.navigate('HomeScreen')
+          }                 
         }, (error) => {
-          console.log(error);
+          Alert.alert("unregistered user!!")         
         });
-    
-           
-        navigation.navigate('HomeScreen')
-        console.log(values.email);
-        console.log(values.password);
       }
       if (!values.password) {
         errors.password = 'Insert your Password';
