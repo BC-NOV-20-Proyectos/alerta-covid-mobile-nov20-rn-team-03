@@ -1,9 +1,11 @@
 import React from 'react';
 import {View, Text, ImageBackground} from 'react-native';
 
+const Image = require('../../../assets/images/ProfileBackground.png')
+
 const Background = () => {
   return (
-    <ImageBackground source={require('../../../assets/images/ProfileBackground.png')}></ImageBackground>
+    <ImageBackground source={Image}></ImageBackground>
   );
 };
 
