@@ -1,41 +1,27 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  ScrollView,
+import { 
   ImageBackground,
 } from 'react-native';
-import {styles} from '../styles/Profile/index';
-import Icons from 'react-native-vector-icons/EvilIcons';
-import IconLogOut from 'react-native-vector-icons/Feather';
-import UserDataScrollView from '../components/atoms/Profile/UserDataScroll';
-import TapMenu from '../components/molecules/TapMenu';
+import {styles} from '../styles/Profile'; 
+import TapMenu from '../components/molecules/TapMenu';  
+import ViewInformation from '../components/atoms/Profile/ViewInformation';
+import LogOutButton from '../components/atoms/Profile/LogOutButton';
+import MyPlaces from '../components/atoms/Profile/MyPlaces';
+import ImageProfile from '../components/atoms/Profile/ImageProfile';
+import {ProfileConstants} from '../utils/Constants/ProfileConstants';
 
 const Profile = ({navigation}) => {
   return (
     <ImageBackground
       source={require('../assets/images/ProfileBackground.png')}
-      style={styles.ImageBackground}>
-      <View style={{display: 'flex', flexDirection: 'row'}}>
-        <View style={styles.ContainerLogo}>
-          <Icons name="user" style={styles.peopleIcon} />
-        </View>
-        <TouchableOpacity style={styles.ContainerIcon}>
-          <Icons name="camera" style={styles.cameraIcon} size={30} />
-        </TouchableOpacity>
-      </View>
-      <TouchableOpacity style={styles.ContainerPlaces}>
-        <Text>My Places</Text>
-        <Text>10</Text>
-      </TouchableOpacity>
-
-      <UserDataScrollView />
-
-      <TouchableOpacity style={styles.ContainerLogOut}>
-        <IconLogOut name="log-out" style={styles.cameraIcon} size={40} />
-        <Text style={{marginTop: 8}}>Log Out</Text>
-      </TouchableOpacity>
+      style={styles.ImageBackground}> 
+      <ImageProfile
+        title={ProfileConstants.hi}
+        name={ProfileConstants.name}
+      ></ImageProfile>
+      <MyPlaces></MyPlaces>
+      <ViewInformation></ViewInformation> 
+      <LogOutButton></LogOutButton>
       <TapMenu navigation={navigation} IconSelected={'User'}></TapMenu>
     </ImageBackground>
   );

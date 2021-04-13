@@ -11,4 +11,5 @@ export const colors = {
   grayTitle: '#7A6D6D',
   grayLine: '#DCDCDC',
   purple: '#EB43EE',
+  grayprofile: '#C4C4C4',
 };
