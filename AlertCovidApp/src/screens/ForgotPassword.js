@@ -8,7 +8,7 @@ import LoginInText from '../components/atoms/ForgotPassword/LoginInText';
 import ButtonForgot from '../components/atoms/ForgotPassword/ButtonForgot';
 import InputForgotPassword from '../components/atoms/ForgotPassword/InputForgotPassword';
 import Background from '../components/atoms/LogIn/BackgroundLogin';
-import {Alert} from 'react-native';
+
 
   const ForgotPassword = ({navigation}) => {
   const [formError, setFormError] = useState({});
@@ -31,7 +31,7 @@ import {Alert} from 'react-native';
         errors.email = 'Invalid Email';
       }
         else{
-         Alert.alert('Sended email for password update');
+         Alert.alert('Sended email for update');
         }
       setFormError(errors);
     },
@@ -40,7 +40,7 @@ import {Alert} from 'react-native';
   return (
     <View style={styles.Background}>
       <Background></Background>
-      
+
       <TitlePassword></TitlePassword>
 
       <View style={styles.containerForm}>
