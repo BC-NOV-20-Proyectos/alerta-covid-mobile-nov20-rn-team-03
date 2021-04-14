@@ -13,5 +13,7 @@ export const ForgotPasswordConstants = {
     forgotPassword: 'Forgot Password',
     LogInS:'LogIn',
     reset: 'Reset Password',
-  };
+    InvalidEmail: 'Invalid Email',
+    InsertEmail:'Insert your Email',
+    SendedEmail: 'Sended email for password update', };
   

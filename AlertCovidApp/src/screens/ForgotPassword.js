@@ -9,14 +9,10 @@ import ButtonForgot from '../components/atoms/ForgotPassword/ButtonForgot';
 import InputForgotPassword from '../components/atoms/ForgotPassword/InputForgotPassword';
 import Background from '../components/atoms/LogIn/BackgroundLogin';
 
-
-  const ForgotPassword = ({navigation}) => {
+const ForgotPassword = ({navigation}) => {
   const [formError, setFormError] = useState({});
 
-  const {
-    setFieldValue,
-    handleSubmit,
-  } = useFormik({
+  const {setFieldValue, handleSubmit} = useFormik({
     initialValues: {
       email: '',
     },
@@ -24,15 +20,14 @@ import Background from '../components/atoms/LogIn/BackgroundLogin';
       let errors = {};
 
       if (!values.email) {
-        errors.email = 'Insert your Email';
+        errors.email = ForgotPasswordConstants.InsertEmail;
       } else if (
         !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
       ) {
-        errors.email = 'Invalid Email';
+        errors.email = ForgotPasswordConstants.InvalidEmail;
+      } else {
+        Alert.alert(ForgotPasswordConstants.SendedEmail);
       }
-        else{
-         Alert.alert('Sended email for update');
-        }
       setFormError(errors);
     },
   });
@@ -40,9 +35,7 @@ import Background from '../components/atoms/LogIn/BackgroundLogin';
   return (
     <View style={styles.Background}>
       <Background></Background>
-
       <TitlePassword></TitlePassword>
-
       <View style={styles.containerForm}>
         <View style={{flexDirection: 'row'}}>
           <Text style={styles.TextInput}>{ForgotPasswordConstants.Email}</Text>
@@ -50,21 +43,14 @@ import Background from '../components/atoms/LogIn/BackgroundLogin';
             <Text style={styles.errortext}>{formError.email}</Text>
           )}
         </View>
-
         <InputForgotPassword
           PlaceHolderText={'Email'}
           iconName={'mail'}
           label={'email'}
           setUserEmail={setFieldValue}></InputForgotPassword>
-  
       </View>
-
-      <ButtonForgot
-        navigation={navigation}
-        click={handleSubmit}></ButtonForgot>
-
-      <LoginInText navigation={navigation} ></LoginInText>
-
+      <ButtonForgot navigation={navigation} click={handleSubmit}></ButtonForgot>
+      <LoginInText navigation={navigation}></LoginInText>
     </View>
   );
 };
