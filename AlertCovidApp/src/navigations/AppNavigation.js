@@ -11,6 +11,7 @@ import ScanQr from '../screens/ScanQr';
 import InformationSymptoms from '../screens/InformationSymptoms';
 import SevereSymptoms from '../screens/SevereSymptoms';
 import CameraQR from '../screens/CameraQR'
+import ForgotPassword from '../screens/ForgotPassword'
 
 const Stack = createStackNavigator();
 
@@ -29,6 +30,7 @@ const AppNavigator = ()=>
         <Stack.Screen name="InformationSymptoms" options={{headerShown: false}} component={InformationSymptoms}/>
         <Stack.Screen name="SevereSymptoms" options={{headerShown: false}} component={SevereSymptoms}/>
         <Stack.Screen name="CameraQR" options={{headerShown: false}} component={CameraQR}/>
+        <Stack.Screen name="ForgotPassword" options={{headerShown: false}} component={ForgotPassword}/>
       </Stack.Navigator>    
   );
 }
