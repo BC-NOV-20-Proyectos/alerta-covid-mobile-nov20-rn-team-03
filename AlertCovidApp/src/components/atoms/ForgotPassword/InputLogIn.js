@@ -12,7 +12,6 @@ const InputLogIn = ({
   click,
   setUserEmail,
   setUserPass,
-  navigation,
 }) => {
   return (
     <View style={styles.Input}>
@@ -34,7 +33,7 @@ const InputLogIn = ({
           }
         }}
       ></TextInput>
-      <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
+      <TouchableOpacity onPress={'ForgotPassword'}>
         <Text style={styles.forgotPass}>{text}</Text>
       </TouchableOpacity>
     </View>

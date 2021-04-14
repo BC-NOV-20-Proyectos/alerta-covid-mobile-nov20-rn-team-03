@@ -44,7 +44,9 @@ const LogIn = ({navigation}) => {
         })
         .then((response) => {         
           var acceso=response.data.success        
-         
+           console.log(response.data.user);
+           console.log(response.data.email);
+           console.log(response);
           if (acceso === true){
             navigation.navigate('HomeScreen')
           }                 
@@ -92,9 +94,11 @@ const LogIn = ({navigation}) => {
           iconName={'lock'}
           PlaceHolderText={'Password'}
           text={LogInConstants.forgotPassword}
+          navigation={navigation}
           label={'password'}
           setUserPass={setFieldValue}></InputLogIn>
       </View>
+      
       <ButtonLogIn
         navigation={navigation}
         RouteGo={LogInConstants.HomeScreen}
