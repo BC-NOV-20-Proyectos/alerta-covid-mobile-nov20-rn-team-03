@@ -6,12 +6,9 @@ import {styles} from '../styles/ForgotPassword/index';
 import {useFormik} from 'formik';
 import LoginInText from '../components/atoms/ForgotPassword/LoginInText';
 import ButtonForgot from '../components/atoms/ForgotPassword/ButtonForgot';
-
-
-import InputLogIn from '../components/atoms/LogIn/InputLogIn';
+import InputForgotPassword from '../components/atoms/ForgotPassword/InputForgotPassword';
 import Background from '../components/atoms/LogIn/BackgroundLogin';
-
-
+import {Alert} from 'react-native';
 
   const ForgotPassword = ({navigation}) => {
   const [formError, setFormError] = useState({});
@@ -33,18 +30,18 @@ import Background from '../components/atoms/LogIn/BackgroundLogin';
       ) {
         errors.email = 'Invalid Email';
       }
+        else{
+         Alert.alert('Sended email for password update');
+        }
       setFormError(errors);
-    },    
+    },
   });
 
   return (
     <View style={styles.Background}>
       <Background></Background>
       
-     
-    
       <TitlePassword></TitlePassword>
-
 
       <View style={styles.containerForm}>
         <View style={{flexDirection: 'row'}}>
@@ -54,21 +51,17 @@ import Background from '../components/atoms/LogIn/BackgroundLogin';
           )}
         </View>
 
-
-        <InputLogIn
+        <InputForgotPassword
           PlaceHolderText={'Email'}
           iconName={'mail'}
           label={'email'}
-          setUserEmail={setFieldValue}></InputLogIn>
-
-          
+          setUserEmail={setFieldValue}></InputForgotPassword>
+  
       </View>
-
 
       <ButtonForgot
         navigation={navigation}
         click={handleSubmit}></ButtonForgot>
-
 
       <LoginInText navigation={navigation} ></LoginInText>
 

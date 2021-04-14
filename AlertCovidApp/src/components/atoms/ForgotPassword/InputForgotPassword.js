@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
-import {styles} from '../../../styles/LogIn';
+import {styles} from '../../../styles/ForgotPassword';
 import Icons from 'react-native-vector-icons/Feather';
 import {colors} from '../../../utils/Colors';
 
-const InputLogIn = ({
+const InputForgotPassword = ({
   PlaceHolderText,
   iconName,
   text,
@@ -40,4 +40,4 @@ const InputLogIn = ({
   );
 };
 
-export default InputLogIn;
+export default InputForgotPassword;
