@@ -40,11 +40,7 @@ import Background from '../components/atoms/LogIn/BackgroundLogin';
   return (
     <View style={styles.Background}>
       <Background></Background>
-      <View style={styles.ContainerLogo}>
-        <Image
-          style={styles.Logo}
-          source={require('../assets/images/Logo.png')}></Image>
-      </View>
+      
      
     
       <TitlePassword></TitlePassword>

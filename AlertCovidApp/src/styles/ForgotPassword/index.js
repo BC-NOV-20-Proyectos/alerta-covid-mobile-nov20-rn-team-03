@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     height: 120,
   },
   ContainerLogo: {
-    backgroundColor: colors.grayLogo,
+    backgroundColor: colors.blue,
     borderRadius: 150,
     justifyContent: 'center',
     alignItems: 'center',
@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
     fontSize: 34,
     color: colors.white,
     fontWeight: 'bold',
-    marginTop: 20,
+    marginTop: '45%',
     marginBottom: 20,
   },
   Background: {
