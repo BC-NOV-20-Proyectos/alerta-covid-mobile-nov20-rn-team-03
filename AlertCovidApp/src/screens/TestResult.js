@@ -5,8 +5,9 @@ import Background from '../components/atoms/Home/BackgroundImage';
 import Title from '../components/atoms/GeneralApp/TitleArrow';
 import ButtonSave from '../components/atoms/GeneralApp/ButtonSecond';
 import {GeneralConstants} from '../utils/Constants/GeneralConstants';
-import ScrollWhite from '../components/atoms/GeneralApp/ScrollWhite';
+import FormTestResult from '../components/atoms/TestResult/FormTestResult';
 import {styles} from '../styles/TestResult';
+
 
 const TestResults = ({navigation}) => {
   return (
@@ -17,7 +18,7 @@ const TestResults = ({navigation}) => {
         textTitle={GeneralConstants.testResultsTitle}
         RouteGo={'HomeScreen'}
       />
-      <ScrollWhite />
+      <FormTestResult />
       <ButtonSave
         navigation={navigation}
         RouteGo={'HistoryTest'}
