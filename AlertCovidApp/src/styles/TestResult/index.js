@@ -30,5 +30,51 @@ export const styles = StyleSheet.create({
     borderRadius: 30,
     paddingVertical: 20,
   },
-  
+  ContainerFormResult: {
+    backgroundColor: colors.white,
+    borderRadius: 20,
+    width: '90%',
+    height: '55%',
+    marginBottom: 20,
+    marginTop: 60,
+    marginHorizontal: 20,
+  },
+  SectionForm: {
+    borderBottomWidth: 1,
+    borderBottomColor: colors.grayLine,
+    marginTop: 15,
+    marginBottom: 10,
+    marginHorizontal: 20,
+  },
+  TitleForm:{
+    color: colors.grayTitle,
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 15
+  },
+  TextForm:{
+    color: colors.grayFont,
+    fontSize: 15,
+  },
+  DateForm:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom:10
+  },
+  ContainerDate:{
+    color: colors.grayFont,
+    fontSize: 14,
+    textAlign:'center',
+    marginEnd:10
+  },
+  DateIconForm:{
+    flexDirection:'row',
+    borderWidth:1,
+    borderColor:colors.grayLine,
+    width:170,
+    justifyContent: 'space-around'
+  },
+  icon:{
+    color: colors.grayFont
+  }
 });

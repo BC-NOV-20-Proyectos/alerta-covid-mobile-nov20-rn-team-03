@@ -3,7 +3,7 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import {styles} from '../../../styles/Home';
 import {colors} from '../../../utils/Colors';
 
-const Button = ({navigation, RouteGo, textButton}) => {
+const Button = ({navigation, RouteGo, textButton, click}) => {
   return (
     <TouchableOpacity
       style={[
@@ -14,7 +14,7 @@ const Button = ({navigation, RouteGo, textButton}) => {
           marginBottom: 10,
         },
       ]}
-      onPress={() => navigation.navigate(RouteGo)}>
+      onPress={click}>
       <Text style={styles.TextButton}>{textButton}</Text>
     </TouchableOpacity>
   );

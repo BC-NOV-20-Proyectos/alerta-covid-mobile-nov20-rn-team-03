@@ -15,7 +15,6 @@ const LogIn = ({navigation}) => {
 
   const {
     values,
-    isSubmitting,
     setFieldValue,
     handleSubmit,
     touched,
