@@ -59,7 +59,8 @@ export const styles = StyleSheet.create({
   DateForm:{
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom:10
+    marginBottom:10,
+    alignItems:'center'
   },
   ContainerDate:{
     color: colors.grayFont,
@@ -72,9 +73,18 @@ export const styles = StyleSheet.create({
     borderWidth:1,
     borderColor:colors.grayLine,
     width:170,
+    borderRadius:6,
     justifyContent: 'space-around'
   },
   icon:{
     color: colors.grayFont
+  },
+  picker:{
+    borderColor: colors.grayLine,
+    borderWidth:1,
+    width:170,      
+    height:35,
+    borderRadius:6,
+    color:'black',
   }
 });

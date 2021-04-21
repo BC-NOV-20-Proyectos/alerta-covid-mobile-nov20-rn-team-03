@@ -49,7 +49,7 @@ const TestResults = ({navigation}) => {
           <Text style={styles.TitleForm}>{GeneralConstants.testResultsTitle}</Text>
           <DatePicker textLabel={GeneralConstants.dateoftest} setDateTest={setFieldValue}/>
           <DatePicker textLabel={GeneralConstants.dateResult} setDateResult={setFieldValue}/>
-          
+          <PickerSelect textLabel={GeneralConstants.Testtype} setDateTypeTest={setFieldValue} textLabelResult={GeneralConstants.Testresult} setDateResult={setFieldValue} textLabelSymptoms={GeneralConstants.SymptomsTest} setDateSymptoms={setFieldValue}/>
         </View>
       </View>
       <ButtonSave

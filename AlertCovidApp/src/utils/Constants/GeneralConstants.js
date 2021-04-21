@@ -21,7 +21,7 @@ export const GeneralConstants = {
   Quicktest: 'Quick test',
   Testresult: 'Test result',
   Testfailed: 'Test failed',
-  SymptomsTest: 'Symptoms on the day of test',
+  SymptomsTest: 'Symptoms',
   textInput: 'Yes',
   dateReported: 'Date Reported'
 };
