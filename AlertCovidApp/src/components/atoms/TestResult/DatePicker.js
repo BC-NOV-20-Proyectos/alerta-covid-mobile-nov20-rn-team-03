@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
 const DatePicker = ({setDateResult, setDateTest, textLabel}) => {
-    const [date, setDate] = useState(new Date('2021-04-30T12:00:00'));
+    const [date, setDate] = useState(new Date('2021-04-21T12:00:00'));
     const [mode, setMode] = useState('date');
     const [show, setShow] = useState(false);
     const [datelabel, setDatelabel] = useState('');
@@ -17,9 +17,9 @@ const DatePicker = ({setDateResult, setDateTest, textLabel}) => {
       
 
       if (textLabel === 'Date of test'){
-        setDateTest('dateTest', selectedDate);
+        setDateTest('dateTest', selectedDate.toDateString());
       } else{
-        setDateResult('dateResult', selectedDate)
+        setDateResult('dateResult', selectedDate.toDateString())
       }
     
   };

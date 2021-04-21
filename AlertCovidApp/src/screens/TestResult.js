@@ -21,7 +21,7 @@ const TestResults = ({navigation}) => {
     handleSubmit,
   } = useFormik({
     initialValues: {
-      dateReported: '',
+      dateReported: moment().format("YYYY-MM-DD"),
       dateTest: '',
       dateResult:'',
       testType:'',
@@ -30,6 +30,7 @@ const TestResults = ({navigation}) => {
     },
     onSubmit: (values) => {
       console.log (values);
+      navigation.navigate('HistoryTest')
     },
   });
   return (
@@ -43,7 +44,10 @@ const TestResults = ({navigation}) => {
       <View style={styles.ContainerFormResult}>
         <View style={styles.SectionForm}>
           <Text style={styles.TitleForm}>{GeneralConstants.dateReported}</Text>
-          <DatePicker textLabel={GeneralConstants.date}/>
+          <View style={styles.DateForm}>
+            <Text style={styles.TextForm}>{GeneralConstants.date}</Text>
+            <Text style={styles.TextForm}>{moment().format("MMM Do YY")}</Text>
+          </View>
         </View>
         <View style={styles.SectionForm}>
           <Text style={styles.TitleForm}>{GeneralConstants.testResultsTitle}</Text>
