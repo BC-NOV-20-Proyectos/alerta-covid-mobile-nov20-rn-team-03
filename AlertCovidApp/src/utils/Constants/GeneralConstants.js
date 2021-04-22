@@ -13,7 +13,7 @@ export const GeneralConstants = {
   QRtitle: 'Scan the QR code',
   date: 'Date',
   datedate:'10/03/2021',
-  dateofrest:'Date of rest',
+  dateoftest:'Date of test',
   dateofrestdate: '06/03/2021',
   dateResult:'Date Result',
   dateResultDate:'09/03/2021',
@@ -21,6 +21,7 @@ export const GeneralConstants = {
   Quicktest: 'Quick test',
   Testresult: 'Test result',
   Testfailed: 'Test failed',
-  SymptomsTest: 'Symptoms on the day of test',
+  SymptomsTest: 'Symptoms',
   textInput: 'Yes',
+  dateReported: 'Date Reported'
 };
