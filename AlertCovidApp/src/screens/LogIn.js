@@ -43,11 +43,12 @@ const LogIn = ({navigation}) => {
         })
         .then((response) => {         
           var acceso=response.data.success  
-          var userToken=response.headers.authorization     
+          var userToken=response.headers.authorization
+          console.log(userToken);     
           setUserToken(userToken);
 
           if (acceso === true){
-            navigation.navigate('HomeScreen')
+            navigation.navigate('HomeScreen', {token:userToken})
           }                 
         }, (error) => {
           Alert.alert("unregistered user!!")         
@@ -101,7 +102,6 @@ const LogIn = ({navigation}) => {
       <ButtonLogIn
         navigation={navigation}
         RouteGo={LogInConstants.HomeScreen}
-        userToken= {userToken}
         click={handleSubmit}></ButtonLogIn>
       <CreateAccountText></CreateAccountText>
     </View>

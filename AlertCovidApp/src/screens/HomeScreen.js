@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text,Button} from 'react-native';
+import {View, Text} from 'react-native';
 import Background from '../components/atoms/Home/BackgroundImage';
 import Title from '../components/atoms/GeneralApp/Title';
 import Button from '../components/atoms/GeneralApp/Button';
@@ -10,21 +10,23 @@ import {GeneralConstants} from '../utils/Constants/GeneralConstants';
 import {styles} from '../styles/Home';
 import axios from 'axios';
 
-const HomeScreen = ({navigation, userToken}) => {
-  console.log(userToken);
+const HomeScreen = ({navigation, route}) => {
+
+  const {token} = route.params
+  console.log(token)  
 
   logout: (userToken) => {
       axios.delete('/api/v1/logout', {
-        "headers":{
+       "headers":{
         "authorization":userToken,                       
-      }            
-      })
-      .then((response) => {         
-      console.log(Good);       
-      }, (error) => {
-        Alert.alert("error!!")         
-      });
-    };
+       }            
+       })
+       .then((response) => {         
+       console.log(Good);       
+       }, (error) => {
+         Alert.alert("error!!")         
+       });
+     };
 
 
 
@@ -57,7 +59,7 @@ const HomeScreen = ({navigation, userToken}) => {
           RouteGo={'CameraQR'}
           textButton={GeneralConstants.scanQr}></ButtonSquare>
        
-          <Button onPress={logout}>
+        <Button textButton={'logout'} navigation={navigation} RouteGo={'LogIn'}>
 
         </Button>
       </View>
