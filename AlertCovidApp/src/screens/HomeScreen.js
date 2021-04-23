@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text,Button} from 'react-native';
 import Background from '../components/atoms/Home/BackgroundImage';
 import Title from '../components/atoms/GeneralApp/Title';
 import Button from '../components/atoms/GeneralApp/Button';
@@ -8,8 +8,26 @@ import ButtonSquare from '../components/atoms/GeneralApp/ButtonSquare';
 import TapMenu from '../components/molecules/TapMenu';
 import {GeneralConstants} from '../utils/Constants/GeneralConstants';
 import {styles} from '../styles/Home';
+import axios from 'axios';
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({navigation, userToken}) => {
+  console.log(userToken);
+
+  logout: (userToken) => {
+      axios.delete('/api/v1/logout', {
+        "headers":{
+        "authorization":userToken,                       
+      }            
+      })
+      .then((response) => {         
+      console.log(Good);       
+      }, (error) => {
+        Alert.alert("error!!")         
+      });
+    };
+
+
+
   return (
     <View style={styles.containerHome}>
       <Background></Background>
@@ -38,6 +56,10 @@ const HomeScreen = ({navigation}) => {
           navigation={navigation}
           RouteGo={'CameraQR'}
           textButton={GeneralConstants.scanQr}></ButtonSquare>
+       
+          <Button onPress={logout}>
+
+        </Button>
       </View>
       <TapMenu navigation={navigation} IconSelected={'Home'} />
     </View>

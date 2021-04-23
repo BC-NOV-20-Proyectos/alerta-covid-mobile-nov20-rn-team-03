@@ -12,7 +12,7 @@ import axios from 'axios';
 
 const LogIn = ({navigation}) => {
   const [formError, setFormError] = useState({});
-
+  const [userToken, setUserToken] = useState('');
   const {
     values,
     setFieldValue,
@@ -42,10 +42,10 @@ const LogIn = ({navigation}) => {
         }            
         })
         .then((response) => {         
-          var acceso=response.data.success        
-           console.log(response.data.user);
-           console.log(response.data.email);
-           console.log(response);
+          var acceso=response.data.success  
+          var userToken=response.headers.authorization     
+          setUserToken(userToken);
+
           if (acceso === true){
             navigation.navigate('HomeScreen')
           }                 
@@ -101,6 +101,7 @@ const LogIn = ({navigation}) => {
       <ButtonLogIn
         navigation={navigation}
         RouteGo={LogInConstants.HomeScreen}
+        userToken= {userToken}
         click={handleSubmit}></ButtonLogIn>
       <CreateAccountText></CreateAccountText>
     </View>
