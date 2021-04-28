@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text} from 'react-native';
 import Background from '../components/atoms/Home/BackgroundImage';
 import Title from '../components/atoms/GeneralApp/Title';
 import Button from '../components/atoms/GeneralApp/Button';
@@ -8,28 +8,8 @@ import ButtonSquare from '../components/atoms/GeneralApp/ButtonSquare';
 import TapMenu from '../components/molecules/TapMenu';
 import {GeneralConstants} from '../utils/Constants/GeneralConstants';
 import {styles} from '../styles/Home';
-import axios from 'axios';
 
-const HomeScreen = ({navigation, route}) => {
-
-  const {token} = route.params
-  console.log(token)  
-
-  const logout = ({token}) => {
-      axios.delete('https://ancient-citadel-41771.herokuapp.com/api/v1/logout', {
-       headers:{
-       Authorization: token,                       
-       }            
-       })
-       .then((response) => {         
-       console.log("Good");    
-       navigation.navigate("LogIn")   
-       }, (error) => {
-        Alert.alert("error!!")         
-       });
-     };
-
-
+const HomeScreen = ({navigation}) => {
 
   return (
     <View style={styles.containerHome}>
@@ -59,12 +39,7 @@ const HomeScreen = ({navigation, route}) => {
           navigation={navigation}
           RouteGo={'CameraQR'}
           textButton={GeneralConstants.scanQr}></ButtonSquare>
-       
-        
-        <TouchableOpacity onPress={logout}>
-          <Text>Log Out</Text>
-        </TouchableOpacity>
-
+      
       </View>
       <TapMenu navigation={navigation} IconSelected={'Home'} />
     </View>
@@ -72,5 +47,3 @@ const HomeScreen = ({navigation, route}) => {
 };
 
 export default HomeScreen;
-
-//<Button textButton={'logout'} navigation={navigation} RouteGo={'LogIn'}></Button>
