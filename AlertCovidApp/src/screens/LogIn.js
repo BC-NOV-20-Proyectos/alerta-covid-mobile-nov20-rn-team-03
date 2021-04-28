@@ -30,7 +30,7 @@ const LogIn = ({navigation}) => {
         errors.email = 'Invalid Email';
       } else {
         axios
-          .post('https://agile-river-63945.herokuapp.com/api/v1/login', {
+          .post( LogInConstants.UrlLogin, {
             user: {
               email: values.email,
               password: values.password,

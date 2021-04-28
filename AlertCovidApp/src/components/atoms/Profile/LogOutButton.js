@@ -1,12 +1,13 @@
 import React from 'react';
 import {Text, TouchableOpacity, Alert} from 'react-native';
 import {styles} from '../../../styles/Profile/index';
+import {GeneralConstants} from '../../../utils/Constants/GeneralConstants'
 import axios from 'axios';
 
 const LogOutButton = ({myToken, navigation}) => {
   const logOut = () => {
     axios
-      .delete('https://agile-river-63945.herokuapp.com/api/v1/logout', {
+      .delete( GeneralConstants.UrlLogout , {
         headers: {
           Authorization: myToken,
         },
