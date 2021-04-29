@@ -10,15 +10,11 @@ import {styles} from '../styles/LogIn/index';
 import {useFormik} from 'formik';
 import axios from 'axios';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 const LogIn = ({navigation}) => {
   const [formError, setFormError] = useState({});
-
-  const {
-    values,
-    setFieldValue,
-    handleSubmit,
-    touched,
-  } = useFormik({
+  const {setFieldValue, handleSubmit} = useFormik({
     initialValues: {
       email: '',
       password: '',
@@ -32,32 +28,33 @@ const LogIn = ({navigation}) => {
         !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
       ) {
         errors.email = 'Invalid Email';
-      }
-      else
-      {                
-        axios.post('https://ancient-citadel-41771.herokuapp.com/api/v1/login', {
-          "user":{
-          "email": values.email,
-          "password": values.password                        
-        }            
-        })
-        .then((response) => {         
-          var acceso=response.data.success        
-           console.log(response.data.user);
-           console.log(response.data.email);
-           console.log(response);
-          if (acceso === true){
-            navigation.navigate('HomeScreen')
-          }                 
-        }, (error) => {
-          Alert.alert("unregistered user!!")         
-        });
+      } else {
+        axios
+          .post(`${LogInConstants.UrlLogin}`, {
+            user: {
+              email: values.email,
+              password: values.password,
+            },
+          })
+          .then(
+            (response) => {
+              var acceso = response.data.success;
+              var userToken = response.headers.authorization;
+              if (acceso === true) {
+                navigation.navigate('HomeScreen');
+                AsyncStorage.setItem('userToken', userToken);
+              }
+            },
+            (error) => {
+              Alert.alert('unregistered user!!');
+            },
+          );
       }
       if (!values.password) {
         errors.password = 'Insert your Password';
       }
       setFormError(errors);
-    },    
+    },
   });
 
   return (
@@ -97,7 +94,7 @@ const LogIn = ({navigation}) => {
           label={'password'}
           setUserPass={setFieldValue}></InputLogIn>
       </View>
-      
+
       <ButtonLogIn
         navigation={navigation}
         RouteGo={LogInConstants.HomeScreen}

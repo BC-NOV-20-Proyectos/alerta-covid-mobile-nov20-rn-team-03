@@ -10,6 +10,7 @@ import {GeneralConstants} from '../utils/Constants/GeneralConstants';
 import {styles} from '../styles/Home';
 
 const HomeScreen = ({navigation}) => {
+
   return (
     <View style={styles.containerHome}>
       <Background></Background>
@@ -38,6 +39,7 @@ const HomeScreen = ({navigation}) => {
           navigation={navigation}
           RouteGo={'CameraQR'}
           textButton={GeneralConstants.scanQr}></ButtonSquare>
+      
       </View>
       <TapMenu navigation={navigation} IconSelected={'Home'} />
     </View>
