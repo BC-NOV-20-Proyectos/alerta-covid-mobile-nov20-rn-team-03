@@ -30,7 +30,7 @@ const LogIn = ({navigation}) => {
         errors.email = 'Invalid Email';
       } else {
         axios
-          .post( LogInConstants.UrlLogin, {
+          .post(`${LogInConstants.UrlLogin}`, {
             user: {
               email: values.email,
               password: values.password,

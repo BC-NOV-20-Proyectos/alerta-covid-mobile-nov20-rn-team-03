@@ -7,7 +7,7 @@ import axios from 'axios';
 const LogOutButton = ({myToken, navigation}) => {
   const logOut = () => {
     axios
-      .delete( GeneralConstants.UrlLogout , {
+      .delete( `${GeneralConstants.UrlLogout}`, {
         headers: {
           Authorization: myToken,
         },
