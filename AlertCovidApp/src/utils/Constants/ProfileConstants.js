@@ -9,4 +9,5 @@ export const ProfileConstants = {
     hi: 'Hi, ',
     MyPlaces: 'My Places',
     NumberOfPlaces: '10',
+    userPass: '********',
 };

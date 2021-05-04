@@ -4,22 +4,22 @@ import {styles} from '../../../styles/Profile/index';
 import InformationProfile from './InformationProfile';
 import {ProfileConstants} from '../../../utils/Constants/ProfileConstants';
 
-const ViewInformation = () => {
+const ViewInformation = ({emailProfile, userProfile}) => {
   return (
     <View style={styles.View}>
       <InformationProfile
         title={ProfileConstants.fullName}
-        change={ProfileConstants.change}
-        userinfo={ProfileConstants.name}/>
+        iconName={'user'}
+        userinfo={userProfile}/>
       <InformationProfile
-        title={ProfileConstants.email}
-        change={ProfileConstants.change}
-        userinfo={ProfileConstants.useremail}
+        title={ProfileConstants.email}        
+        userinfo={emailProfile}
+        iconName={'mail'}
       ></InformationProfile>
       <InformationProfile
         title={ProfileConstants.password}
         change={ProfileConstants.change}
-        userinfo={ProfileConstants.password}
+        userinfo={ProfileConstants.userPass}
       ></InformationProfile>
     </View>
   );

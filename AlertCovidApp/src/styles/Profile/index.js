@@ -9,8 +9,8 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   ImageProfile: { 
-    height: 120,
-    width: 120,
+    height: 100,
+    width: 100,
     borderRadius: 100,
     backgroundColor: colors.grayprofile,
     alignSelf: 'center',
@@ -19,12 +19,12 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   Hi: {
-    fontSize: 24,
+    fontSize: 20,
     color: colors.white,
     fontWeight: 'bold',
   },
   MyPlaces: { 
-    height: 86,
+    height: '10%',
     width: '60%',
     borderRadius: 22,
     backgroundColor: colors.white,
@@ -63,15 +63,15 @@ export const styles = StyleSheet.create({
   },
   UserInformationChange: { 
     fontSize: 14,
-    color: colors.gray,
+    color: colors.blue,
   }, 
   UserInformationBold: {
-    fontSize: 18,
+    fontSize: 16,
     color: colors.gray,
     fontWeight: 'bold',
   },
   UserInformation: { 
-    fontSize: 18,
+    fontSize: 16,
     color: colors.gray,  
   }, 
   Line: {
@@ -86,7 +86,7 @@ export const styles = StyleSheet.create({
     height: '8%',
     width: '90%',
     borderRadius: 22,
-    marginTop: 10,
+    marginTop: 20,
     backgroundColor: colors.white,
     justifyContent: 'center',
   },

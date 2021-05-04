@@ -38,11 +38,17 @@ const LogIn = ({navigation}) => {
           })
           .then(
             (response) => {
+             
               var acceso = response.data.success;
               var userToken = response.headers.authorization;
+              var userProfile = response.data.user;
+              var emailProfile = response.data.email;
+            
               if (acceso === true) {
                 navigation.navigate('HomeScreen');
                 AsyncStorage.setItem('userToken', userToken);
+                AsyncStorage.setItem('userProfile', userProfile);
+                AsyncStorage.setItem('emailProfile', emailProfile);
               }
             },
             (error) => {
