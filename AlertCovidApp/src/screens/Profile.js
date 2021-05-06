@@ -12,10 +12,20 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Profile = ({navigation}) => {
   const [userTokenProfile, setUserTokenProfile] = useState('');
-
+  const [userProfile, setUserProfile] = useState('');
+  const [emailProfile, setEmailProfile] = useState('');
+  
   useEffect(() => {
     AsyncStorage.getItem('userToken').then((response) => {
       setUserTokenProfile(response);
+    });
+    
+    AsyncStorage.getItem('userProfile').then((response) => {
+      setUserProfile(response);
+    });
+
+    AsyncStorage.getItem('emailProfile').then((response) => {
+      setEmailProfile(response);
     });
   });
 
@@ -25,9 +35,12 @@ const Profile = ({navigation}) => {
       style={styles.ImageBackground}>
       <ImageProfile
         title={ProfileConstants.hi}
-        name={ProfileConstants.name}></ImageProfile>
+        name={userProfile}></ImageProfile>
       <MyPlaces></MyPlaces>
-      <ViewInformation></ViewInformation>
+      <ViewInformation
+        emailProfile={emailProfile}
+        userProfile ={userProfile}
+      ></ViewInformation>
       <LogOutButton
         myToken={userTokenProfile}
         navigation={navigation}></LogOutButton>
