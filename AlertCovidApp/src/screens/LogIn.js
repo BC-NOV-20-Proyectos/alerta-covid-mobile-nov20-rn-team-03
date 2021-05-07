@@ -43,6 +43,7 @@ const LogIn = ({navigation}) => {
               var userToken = response.headers.authorization;
               var userProfile = response.data.user;
               var emailProfile = response.data.email;
+              
             
               if (acceso === true) {
                 navigation.navigate('HomeScreen');
