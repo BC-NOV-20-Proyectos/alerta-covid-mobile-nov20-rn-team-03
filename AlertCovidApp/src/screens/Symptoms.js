@@ -3,7 +3,7 @@ import {View, Text,ScrollView} from 'react-native';
 import Title from '../components/atoms/GeneralApp/TitleArrow';
 import ButtonRoute from '../components/atoms/GeneralApp/Button';
 import ButtonSymptoms from '../components/atoms/Symptoms/ButtonSymptoms';
-import ButtonSecond from '../components/atoms/GeneralApp/ButtonSecond'
+import ButtonNext from '../components/atoms/Symptoms/ButtonNext'
 import TapMenu from '../components/molecules/TapMenu'
 import {SymptomsConstants} from '../utils/Constants/SymptomsConstants';
 import {styles} from '../styles/Symptoms'
@@ -30,7 +30,7 @@ const Symptoms = ({navigation}) => {
           <Card.Divider/>
           <CheckboxSymptoms Symptom={SymptomsConstants.sense} />
         </Card>
-          <ButtonSecond navigation={navigation} RouteGo={'SevereSymptoms'} textButton={SymptomsConstants.next} />
+          <ButtonNext navigation={navigation} RouteGo={'SevereSymptoms'} textButton={SymptomsConstants.next} />
       
         <TapMenu navigation={navigation} IconSelected={'Home'}/>
       </View>
