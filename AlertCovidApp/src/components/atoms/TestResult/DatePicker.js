@@ -7,7 +7,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 const DatePicker = ({setDateResult, setDateTest, textLabel}) => {
     const [date, setDate] = useState(new Date('2021-04-21T12:00:00'));
     const [mode, setMode] = useState('date');
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(false);  
     const [datelabel, setDatelabel] = useState('');
 
     const onChange = (event, selectedDate) => {
@@ -15,11 +15,18 @@ const DatePicker = ({setDateResult, setDateTest, textLabel}) => {
     setShow(Platform.OS === 'ios');
     setDate(currentDate);
       
-
+  
       if (textLabel === 'Date of test'){
-        setDateTest('dateTest', selectedDate.toDateString());
+        var stringdate = selectedDate;
+        var dayTest = selectedDate.getDate();
+        var monthTest =selectedDate.getMonth();
+        var yearTest = selectedDate.getFullYear();
+        setDateTest('dateTest', `${yearTest}-${monthTest+1}-${dayTest}`);
       } else{
-        setDateResult('dateResult', selectedDate.toDateString())
+        var dayResult = selectedDate.getDate();
+        var monthResult =selectedDate.getMonth();
+        var yearResult = selectedDate.getFullYear();
+        setDateResult('dateResult', `${yearResult}-${monthResult+1}-${dayResult}`)
       }
     
   };
@@ -53,6 +60,7 @@ const DatePicker = ({setDateResult, setDateTest, textLabel}) => {
           placeholderText="select date"
           value={date}
           mode={date}
+          dateFormat="MM/DD/YYYY"
           display="default"
           onChange={onChange}
           is24Hour={false}
