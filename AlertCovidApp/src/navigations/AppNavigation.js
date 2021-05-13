@@ -7,7 +7,7 @@ import HistoryTest from "../screens/HistoryTest";
 import HistorySymptoms  from "../screens/HistorySymptoms";
 import Symptoms from '../screens/Symptoms';
 import TestResult from '../screens/TestResult';
-import ScanQr from '../screens/ScanQr';
+import Places from '../screens/Places';
 import InformationSymptoms from '../screens/InformationSymptoms';
 import SevereSymptoms from '../screens/SevereSymptoms';
 import CameraQR from '../screens/CameraQR'
@@ -23,7 +23,7 @@ const AppNavigator = ()=>
         <Stack.Screen name="HomeScreen" options={{headerShown: false}} component={HomeScreen}/>                 
         <Stack.Screen name="Symptoms" options={{headerShown: false}} component={Symptoms}/>                 
         <Stack.Screen name="TestResult" options={{headerShown: false}} component={TestResult}/>                 
-        <Stack.Screen name="ScanQr" options={{headerShown: false}} component={ScanQr}/>                 
+        <Stack.Screen name="Places" options={{headerShown: false}} component={Places}/>                 
         <Stack.Screen name="Profile" options={{headerShown: false}} component={Profile}/>
         <Stack.Screen name="HistoryTest" options={{headerShown: false}} component={HistoryTest}/>
         <Stack.Screen name="HistorySymptoms" options={{headerShown: false}} component={HistorySymptoms}/>

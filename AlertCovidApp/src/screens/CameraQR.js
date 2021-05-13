@@ -38,17 +38,26 @@ const CameraQR = ({navigation}) => {
            },
         })
         .then(
-          (response) => {
+          (response) => {   
+            
+            /*
+            var acceso = response.data.success;
+            var placesCode = response.data;  
+            
+              if (acceso === true) {
+                AsyncStorage.setItem('placesCode', placesCode);
+              }*/
+
+            //console.log(response.data)
+            console.log(response)
+
             console.log('Code registered!!')
+            navigation.navigate('Places')
           },
           (error) => {
             alert('Code not registered!!');
           },
-        );      
-      
-    // Linking.openURL(e.data).catch(err =>
-    //   console.error('An error occured', err)
-    // );
+        );              
   };
   
   return (
@@ -59,12 +68,7 @@ const CameraQR = ({navigation}) => {
         textTitle={GeneralConstants.QRtitle}
         RouteGo={'HomeScreen'}
       />
-      {/* {result && <Text>{JSON.stringify(result,null,2)}</Text>} */}
-      <TouchableOpacity onPress={()=>{
-          navigation.navigate('ScanQr')
-          }}>
-          <Text>My places List</Text>
-      </TouchableOpacity>
+      {/* {result && <Text>{JSON.stringify(result,null,2)}</Text>} */}     
 
       <View style={styles.containerQR}>
          <QRCodeScanner         

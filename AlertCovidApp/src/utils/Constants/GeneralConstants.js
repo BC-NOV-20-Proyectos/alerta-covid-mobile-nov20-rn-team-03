@@ -24,6 +24,6 @@ export const GeneralConstants = {
   SymptomsTest: 'Symptoms',
   textInput: 'Yes',
   dateReported: 'Date Reported',
-  UrlLogout: 'https://agile-river-63945.herokuapp.com/api/v1/logout',
-  urlPlaces: 'https://agile-river-63945.herokuapp.com//api/v1/area_histories'
+  UrlLogout: 'https://ancient-citadel-41771.herokuapp.com/api/v1/logout',
+  urlPlaces: 'https://ancient-citadel-41771.herokuapp.com/places'
 };
