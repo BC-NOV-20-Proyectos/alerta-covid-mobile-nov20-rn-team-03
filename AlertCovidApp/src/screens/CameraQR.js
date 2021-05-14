@@ -27,6 +27,7 @@ const CameraQR = ({navigation}) => {
 
     alert(dataQr)
     console.log(dataQr);
+    AsyncStorage.setItem('placesCode', dataQr);
 
     axios
         .post(`${GeneralConstants.urlPlaces}`, {
@@ -49,7 +50,7 @@ const CameraQR = ({navigation}) => {
               }*/
 
             //console.log(response.data)
-            console.log(response)
+            console.log(response.config.data.area_history)
 
             console.log('Code registered!!')
             navigation.navigate('Places')
