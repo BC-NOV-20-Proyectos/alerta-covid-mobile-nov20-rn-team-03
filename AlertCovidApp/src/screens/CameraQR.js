@@ -29,36 +29,24 @@ const CameraQR = ({navigation}) => {
     console.log(dataQr);
     AsyncStorage.setItem('placesCode', dataQr);
 
-    axios
-        .post(`${GeneralConstants.urlPlaces}`, {
-          area_history: {
-            qrcode: dataQr,
-          },
-           headers: {
-            Authorization: userTokenCamera,
-           },
+   axios.post(`${GeneralConstants.urlPlaces}`, {
+          place_history: {
+            id: dataQr,
+          }  
+        },{
+          headers: {
+           Authorization: userTokenCamera
+         },
         })
-        .then(
-          (response) => {   
-            
-            /*
-            var acceso = response.data.success;
-            var placesCode = response.data;  
-            
-              if (acceso === true) {
-                AsyncStorage.setItem('placesCode', placesCode);
-              }*/
-
-            //console.log(response.data)
-            console.log(response.config.data.area_history)
-
+        .then((response) => {   
+            console.log(response.data)
             console.log('Code registered!!')
             navigation.navigate('Places')
           },
           (error) => {
             alert('Code not registered!!');
           },
-        );              
+        );  
   };
   
   return (
