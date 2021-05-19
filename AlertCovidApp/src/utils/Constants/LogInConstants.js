@@ -10,6 +10,5 @@ export const LogInConstants = {
   HistoryTest: 'HistoryTest',
   HistoryTest2: 'HistoryTest2',
   forgotPassword: 'Forgot Password?',
-  //UrlLogin:'https://agile-river-63945.herokuapp.com/api/v1/login',
   UrlLogin:'https://ancient-citadel-41771.herokuapp.com/api/v1/login',
 };

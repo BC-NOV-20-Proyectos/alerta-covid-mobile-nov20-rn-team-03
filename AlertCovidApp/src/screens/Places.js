@@ -1,37 +1,31 @@
-import React,{useEffect,useState} from 'react';
-import {View, Text, TouchableOpacity, FlatList} from 'react-native';
+import React from 'react';
+import {View, Text, FlatList} from 'react-native';
 import TapMenu from '../components/molecules/TapMenu';
 import Background from '../components/atoms/Home/BackgroundImage';
-import Title from '../components/atoms/GeneralApp/TitleArrow'; 
-import {GeneralConstants} from '../utils/Constants/GeneralConstants'; 
+import Title from '../components/atoms/GeneralApp/TitleArrow';
+import {GeneralConstants} from '../utils/Constants/GeneralConstants';
 import {styles} from '../styles/TestResult';
 import {stylesPlace} from '../styles/Places';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const Item = ({ name, id }) => (
-  <View style={stylesPlace.place} >
-   <Text>{id}</Text> 
+const Item = ({name, id}) => (
+  <View style={stylesPlace.place}>
+    <Text>{id}</Text>
     <Text style={stylesPlace.text}>{name}</Text>
   </View>
 );
 
-const TestResults = ({navigation,route}) => {
-  const {arrayData} = route.params
-  const DATA = [];  
+const TestResults = ({navigation, route}) => {
+  const {arrayData} = route.params;
+  const DATA = [];
 
-  for(let i=0; i<arrayData.length; i++){
-    DATA.push(
-        {
-          id:`${i+1}`, 
-          name:arrayData[i]
-        }
-      )
-  }  
-  console.log(DATA);
-  
-  const renderItem = ({ item }) => ( 
-     <Item name={item.name} id={item.id}  
-     /> ); 
+  for (let i = 0; i < arrayData.length; i++) {
+    DATA.push({
+      id: `${i + 1}`,
+      name: arrayData[i],
+    });
+  }
+
+  const renderItem = ({item}) => <Item name={item.name} id={item.id} />;
 
   return (
     <View style={styles.containerTestResult}>
@@ -49,10 +43,10 @@ const TestResults = ({navigation,route}) => {
             justifyContent: 'space-between',
           }}>
           <FlatList
-              data={DATA}
-              renderItem={renderItem}
-              keyExtractor={item => item.id}              
-            />
+            data={DATA}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id}
+          />
         </View>
       </View>
       <TapMenu navigation={navigation} IconSelected={'History'}></TapMenu>
