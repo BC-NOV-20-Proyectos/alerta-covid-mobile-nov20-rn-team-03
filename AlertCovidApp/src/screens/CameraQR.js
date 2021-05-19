@@ -24,10 +24,7 @@ const CameraQR = ({navigation}) => {
 
   const onSuccess = (e) => {
     const dataQr = e.data;
-
-    alert(dataQr)
-    console.log(dataQr);
-    AsyncStorage.setItem('placesCode', dataQr);
+   
 
    axios.post(`${GeneralConstants.urlPlaces}`, {
           place_history: {
@@ -40,8 +37,21 @@ const CameraQR = ({navigation}) => {
         })
         .then((response) => {   
             console.log(response.data)
+          
+            let arrayPlaces = [];
+
+            for (let i = 0; i <response.data.length; i++) {
+              for (let j = 0; j <response.data[j].length; j++) {
+                if (j === 1){
+                  arrayPlaces.push(response.data[i][j])
+                }
+              }
+            }
+            console.log(arrayPlaces);
+            // AsyncStorage.setItem('arrayPlaces', arrayPlaces);
+
             console.log('Code registered!!')
-            navigation.navigate('Places')
+            navigation.navigate('Places',{arrayData:arrayPlaces})
           },
           (error) => {
             alert('Code not registered!!');
