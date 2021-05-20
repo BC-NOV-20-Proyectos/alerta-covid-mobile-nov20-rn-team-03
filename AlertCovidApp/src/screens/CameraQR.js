@@ -4,6 +4,7 @@ import TapMenu from '../components/molecules/TapMenu';
 import Background from '../components/atoms/Home/BackgroundImage';
 import Title from '../components/atoms/GeneralApp/TitleArrow';
 import {GeneralConstants} from '../utils/Constants/GeneralConstants';
+import {Services} from '../utils/Constants/Services';
 import {styles} from '../styles/TestResult';
 import axios from 'axios';
 
@@ -25,7 +26,7 @@ const CameraQR = ({navigation}) => {
 
     axios
       .post(
-        `${GeneralConstants.urlPlaces}`,
+        `${Services.urlPlaces}`,
         {
           place_history: {
             id: dataQr,

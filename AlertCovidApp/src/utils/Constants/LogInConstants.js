@@ -10,5 +10,4 @@ export const LogInConstants = {
   HistoryTest: 'HistoryTest',
   HistoryTest2: 'HistoryTest2',
   forgotPassword: 'Forgot Password?',
-  UrlLogin:'https://ancient-citadel-41771.herokuapp.com/api/v1/login',
 };
