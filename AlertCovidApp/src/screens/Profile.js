@@ -35,8 +35,8 @@ const Profile = ({navigation}) => {
       style={styles.ImageBackground}>
       <ImageProfile
         title={ProfileConstants.hi}
-        name={userProfile}></ImageProfile>
-      <MyPlaces></MyPlaces>
+        name={userProfile}></ImageProfile>       
+      <MyPlaces navigation={navigation}></MyPlaces>     
       <ViewInformation
         emailProfile={emailProfile}
         userProfile ={userProfile}

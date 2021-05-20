@@ -7,7 +7,7 @@ const MyPlaces = () => {
   return (
     <View style={styles.MyPlaces}>
       <Text style={styles.MyPlacesText}>{ProfileConstants.MyPlaces}</Text>
-      <Text style={styles.MyPlacesNumber}>{ProfileConstants.NumberOfPlaces}</Text>
+      <Text style={styles.MyPlacesNumber}>{ProfileConstants.NumberOfPlaces}</Text>     
     </View>
   );
 };

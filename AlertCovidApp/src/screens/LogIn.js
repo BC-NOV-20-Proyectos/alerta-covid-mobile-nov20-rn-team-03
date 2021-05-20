@@ -6,6 +6,7 @@ import ButtonLogIn from '../components/atoms/LogIn/ButtonLogIn';
 import CreateAccountText from '../components/atoms/LogIn/CreateAccountText';
 import Background from '../components/atoms/LogIn/BackgroundLogin';
 import {LogInConstants} from '../utils/Constants/LogInConstants';
+import {Services} from '../utils/Constants/Services';
 import {styles} from '../styles/LogIn/index';
 import {useFormik} from 'formik';
 import axios from 'axios';
@@ -30,7 +31,7 @@ const LogIn = ({navigation}) => {
         errors.email = 'Invalid Email';
       } else {
         axios
-          .post(`${LogInConstants.UrlLogin}`, {
+          .post(`${Services.UrlLogin}`, {
             user: {
               email: values.email,
               password: values.password,
@@ -43,6 +44,7 @@ const LogIn = ({navigation}) => {
               var userToken = response.headers.authorization;
               var userProfile = response.data.user;
               var emailProfile = response.data.email;
+              
             
               if (acceso === true) {
                 navigation.navigate('HomeScreen');

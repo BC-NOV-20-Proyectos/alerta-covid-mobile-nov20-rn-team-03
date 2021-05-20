@@ -24,5 +24,4 @@ export const GeneralConstants = {
   SymptomsTest: 'Symptoms',
   textInput: 'Yes',
   dateReported: 'Date Reported',
-  UrlLogout: 'https://agile-river-63945.herokuapp.com/api/v1/logout',
 };
