@@ -8,8 +8,6 @@ const InputLogIn = ({
   PlaceHolderText,
   iconName,
   text,
-  label,
-  click,
   setUserEmail,
   setUserPass,
   navigation,

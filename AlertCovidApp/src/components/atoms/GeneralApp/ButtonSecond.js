@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
 import {styles} from '../../../styles/Home';
 import {colors} from '../../../utils/Colors';
 
-const Button = ({navigation, RouteGo, textButton, click}) => {
+const Button = ({textButton, click}) => {
   return (
     <TouchableOpacity
       style={[

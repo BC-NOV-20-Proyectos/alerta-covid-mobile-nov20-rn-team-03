@@ -1,5 +1,5 @@
-import React,{useState}  from 'react';
-import {View, Text, TouchableOpacity, Button, TextInput} from 'react-native';
+import React,{useState, useEffect}  from 'react';
+import {View, Text, Alert} from 'react-native';
 import {GeneralConstants} from '../utils/Constants/GeneralConstants'
 import TapMenu from '../components/molecules/TapMenu';
 import Background from '../components/atoms/Home/BackgroundImage';
@@ -8,15 +8,22 @@ import ButtonSave from '../components/atoms/GeneralApp/ButtonSecond';
 import {styles} from '../styles/TestResult';
 import DatePicker from '../components/atoms/TestResult/DatePicker';
 import PickerSelect from '../components/atoms/TestResult/PickerSelect';
+import {Services} from '../utils/Constants/Services';
 import moment from 'moment';
 import {useFormik} from 'formik';
 import axios from 'axios';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const TestResults = ({navigation}) => {
-  const [formError, setFormError] = useState({});
+  const [userTokenTest, setUserTokenTest] = useState('');
+
+  useEffect(() => {
+    AsyncStorage.getItem('userToken').then((response) => {
+      setUserTokenTest(response);
+    });
+  });
 
   const {
-    values,
     setFieldValue,
     handleSubmit,
   } = useFormik({
@@ -29,6 +36,37 @@ const TestResults = ({navigation}) => {
       symptomsOnDay:'',
     },
     onSubmit: (values) => {
+      axios
+          .post(`${Services.UrlIncidents}`, {
+            incident: {
+              test_covid_attributes :{
+                date_did: values.dateReported,
+                date_get_result: values.dateResult,
+                had_symptoms:true,
+                type_test: values.testType,
+                result: true
+              }
+            },
+          },
+          {
+            headers: {
+              Authorization: userTokenTest,
+            },
+          },
+          )
+          .then(
+            (response) => { 
+              console.log(response);
+              console.log('Test regisdsfsdfsdfsdftered')
+              console.log(response.data);         
+              console.log('Test registered')
+            },
+            (error) => {
+              Alert.alert('unregistered test!!');
+            },
+          );
+
+      
       console.log (values);
       navigation.navigate('HistoryTest')
     },

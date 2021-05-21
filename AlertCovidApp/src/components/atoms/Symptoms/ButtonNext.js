@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
 import {styles} from '../../../styles/Home';
 import {colors} from '../../../utils/Colors';
 
-const ButtonNext = ({navigation, RouteGo, textButton, click}) => {
+const ButtonNext = ({textButton, click}) => {
   return (
     <TouchableOpacity
       style={[
@@ -14,7 +14,7 @@ const ButtonNext = ({navigation, RouteGo, textButton, click}) => {
           marginBottom: 10,
         },
       ]}
-      onPress={() => navigation.navigate(RouteGo)}>
+      onPress={click}>
       <Text style={styles.TextButton}>{textButton}</Text>
     </TouchableOpacity>
   );

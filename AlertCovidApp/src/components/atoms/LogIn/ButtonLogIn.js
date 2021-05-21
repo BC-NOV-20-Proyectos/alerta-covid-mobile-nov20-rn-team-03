@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
 import {styles} from '../../../styles/LogIn';
 import {LogInConstants} from '../../../utils/Constants/LogInConstants';
 
-const ButtonLogIn = ({navigation, RouteGo, click}) => {
+const ButtonLogIn = ({click}) => {
   return (
     <TouchableOpacity style={styles.ButtonLogIn} onPress={click}>
       <Text style={styles.TextButton}>{LogInConstants.LogIn}</Text>

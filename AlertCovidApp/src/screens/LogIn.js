@@ -104,8 +104,6 @@ const LogIn = ({navigation}) => {
       </View>
 
       <ButtonLogIn
-        navigation={navigation}
-        RouteGo={LogInConstants.HomeScreen}
         click={handleSubmit}></ButtonLogIn>
       <CreateAccountText></CreateAccountText>
     </View>
